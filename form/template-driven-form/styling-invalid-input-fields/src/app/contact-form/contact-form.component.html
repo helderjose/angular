@@ -1,0 +1,34 @@
+
+<!--
+  Conteúdo desse exemplo:
+  styles.css tem o css do exemplo
+-->
+<form>
+  <div class="form-group">
+      <label for="firstName">First name</label>
+      <input
+        minlength="3" maxlength="10"
+        pattern="banana"
+        required
+        type="text"
+        id="firstName" class="form-control"
+        name="firstName" #firstName="ngModel"
+        ngModel
+        (change)="log(firstName)"
+      >
+
+      <div
+        *ngIf="firstName.touched && !firstName.valid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+        <div *ngIf="firstName.errors.minlength">
+          First name should be minimum {{ firstName.errors.minlength.requiredLength }} characters.
+        </div>
+        <div *ngIf="firstName.errors.pattern">First name doesn't match the pattern (digite o que está no pattern).</div>
+      </div>
+  </div>
+
+
+  <button class="btn btn-primary">Submit</button>
+</form>

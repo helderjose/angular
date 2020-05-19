@@ -1,0 +1,88 @@
+<section class="property-binding">
+    <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String rederizada com interpolation {{ url }}</p>
+        <p>chamando getValor(): {{ getValor() }}</p>
+    </article>
+
+    <article>
+        <h3>Property binding</h3>
+        <!-- usando interpolação -->
+        <img src="{{urlImg}}"/>
+        <!-- usando porperty binding -->
+        <img [src]="urlImg"/>
+        <!-- usando porperty binding 2-->
+        <img bind-src="urlImg"/>
+    </article>
+
+    <article>
+      <h3>Class e Style binding</h3>
+      <div>
+        Selecione uma classe:
+        <!--
+        #classe (change)="0" é um event binding
+        é com parênteses.
+
+        Propertie binding é com colchetes.
+        -->
+        <!-- event binding -->
+        <select #classe (change)="0">
+          <option value="alert-success">Sucesso</option>
+          <option value="alert-info">Info</option>
+          <option value="alert-warning">Warning</option>
+          <option value="alert-danger">Erro</option>
+        </select>
+        <br/><br/>
+
+        <div class="alert {{classe.value}}" role="alert">
+          Texto colorido conforme valor do combobox.
+        </div>
+
+        <!-- class binding -->
+        <div class="alert" role="alert"
+          [class.alert-succes]="classe.value == 'alert-success'">Sucesso</div>
+
+        <div class="alert" role="alert"
+        [class.alert-info]="classe.value == 'alert-info'">Info</div>
+
+        <div class="alert" role="alert"
+          [class.alert-warning]="classe.value == 'alert-warning'">Warning</div>
+
+        <div class="alert" role="alert"
+          [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+
+          <!-- style binding -->
+          <div class="alert alert-danger" role="alert"
+            style="display:block;"
+            [style.display]="classe.value == 'alert-danger' ? 'block': 'none'">
+            Esse texto somente aparece em caso de erro.
+          </div>
+      </div>
+
+      <p>Event binding é com parênteses</p>
+    </article>
+</section>
+
+<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="onClick()">Me clique!</button>
+      <br/><br/>
+
+      <input type="text"
+      (keyup)="onKeyup($event)"
+      (keyup.enter)='onSave($event.target.value)'
+      (blur)="onSave(campo.value)"
+      #campo>
+      <p>Conteudo atual: {{ conteudoAtual }}<br/>
+      Conteudo Salvo: {{conteudoSalvo}}</p>
+
+      <span
+        (mouseover)="onMouseSpan()"
+        (mouseout)="onMouseSpan()"
+        [class.highlight]="isMouseOver">
+          Passe o mouse sobre mim!</span>
+    </div>
+  </article>
+</section>

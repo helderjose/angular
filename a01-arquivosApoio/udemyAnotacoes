@@ -1,0 +1,7 @@
+Node usado no curso
+
+- node v6.10.3;
+- Angular CLI;
+ng --version
+/@angular/cli: 1.1.0
+

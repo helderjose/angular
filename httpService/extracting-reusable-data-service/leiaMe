@@ -1,0 +1,10 @@
++ data.service.ts
+    - passou o código do post.service.ts para cá.
++ post.service.ts
+    - usa o data.service.ts.
++ posts.component.ts
+    - usa o post.service.ts
+
+
+npm install
+ng serve

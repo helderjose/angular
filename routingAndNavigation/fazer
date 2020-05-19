@@ -1,0 +1,8 @@
+falar sobre Observable,
+se for observable tem que usar .subscribe
+
+
+------------
+
+falar sobre promise
+se for promise tem que usar .then ou .catch

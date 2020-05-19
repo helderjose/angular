@@ -1,0 +1,7 @@
+Usando two way binding
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+
+precisa do "FormsModule" no app.module.ts para funcionar o two way binding
+
+usando property binding: do component para a view
+<input [value]="email" (keyup.enter)="onKeyUp()">

@@ -1,0 +1,17 @@
+<p>
+    <b>Nesse exemplo temos:</b><br/>
+    ng-content - <b>panel.component.html</b><br/>
+</p>
+
+
+<!--
+    O conteúdo do class="heading" será colocado no select=".heading" do panel.component.html
+    O conteúdo do class="body" será colocado no select=".body" do panel.component.html
+-->
+<bootstrap-panel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+        <p>some content here...</p>
+    </div>
+</bootstrap-panel>

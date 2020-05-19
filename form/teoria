@@ -1,0 +1,40 @@
+------- Reactive form ------------
+- More control over validation logic
+- Good for complex forms
+- Unit testable
+
+---------- model driven form ---------------
+- Good for simple forms
+- Simple validation
+- Easier to create
+- Less code
+- But we also have less control
+
+
+------------ A Classe FormGroup ------------
+This group represents a group of controls in a form. Each form is essentially a control group.
+But in a complex application, you might have a form with multiple control groups.
+
+
+
+------------ A Classe FormControl -----------
+A classe FormControl do Angular contém vários atributos como dirty, invalid, value e etc. É essa classe que usamos para trabalhar com formulários.
+When we apply the ngModel directive, along with the name attribute in a input field, Angular automatically creates an instance of FormControl class and
+associates it with that field.
+
+Para usar o recurso de validação de formulário precisa importar
+import { FormsModule } from '@angular/forms';
+no app.module.ts
+
+
+----------- ngForm -------------
+Quando usamos ngForm recebemos um objeto de FormControl que representa o input
+
+----------- ngFormGroup -------------
+Quando usamos ngFormControl recebemos um objeto de FormGroup que representa um grupo de inputs.
+ngForm é automaticamente associado a cada elemento do grupo e automaticamente é criado  um objeto de FormGroup
+
+
+----------- Diferenças entre ngForm e ngFormGroup -------------
+ngForm - expõe um output property e um ngSubmit que usamos para manipular o evento submit.
+ngModelGroup - não tem output property porque não faz sentido dar submit em parte do form.

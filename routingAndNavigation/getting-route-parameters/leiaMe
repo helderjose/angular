@@ -1,0 +1,9 @@
++ app.module.ts
+    - olhe a rota "{path: 'followers/:id', component: GithubProfileComponent},",
+    vamos recuperar o valor de "id"
+
++ github-profile.component.ts
+    - pega o id da url
+
+
+Testes do exemplo: clique no nome de um followers

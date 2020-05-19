@@ -1,0 +1,26 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        
+        <input
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control"
+        >
+        <!--
+            antes de criar o get username no .ts teria que fazer assim:
+            *ngIf="form.get('username').touched && form.get('username').invalid"
+        -->
+        <div
+            *ngIf="username.touched && username.invalid"
+            class="alert alert-danger"
+        >
+            Username is required
+        </div>
+
+        <!-- outros inputs aqui -->
+    </div>
+
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

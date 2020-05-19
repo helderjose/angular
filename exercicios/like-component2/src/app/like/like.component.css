@@ -1,0 +1,12 @@
+.glyphicon {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.highlighted {
+    color: deeppink;
+}
+
+span {
+    font-size: 3em;
+}

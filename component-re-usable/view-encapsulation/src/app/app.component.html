@@ -1,0 +1,41 @@
+<p>
+    abra o console e clique no ícone<br/>
+    <b>Nesse exemplo temos:</b><br/>
+    View Encapsulation<br/>
+</p>
+
+<p>
+    Pesquise por Shadow DOM. Angular simula um shadown DOM quando usamos View Encapsulation.
+</p>
+
+<pre>
+    No inspetor de elementos podemos ver a hierarquia no css dependendo do modo que
+    usamos no ViewEncapsulation.
+
+    <b>ViewEncapsulation.Emulated</b>
+        Angular emulates Shadow DOM. So it understands that most browsers out there don't support
+        Shadow DOM, so it has it's own trick to apply it's scope to our styles.
+        Esse é o default.
+    
+    <b>encapsulation: ViewEncapsulation.Native</b>
+        Native viwe encapsulation which uses shadow DOM in the browser.
+
+    <b>encapsulation: ViewEncapsulation.None</b>
+    here we're not going to have view encapsulation. So the styles defined here will leak outside this template. In other words, when we go back to the browser, both our icons are going to be red.
+
+</pre>
+
+
+<!--
+    (change) Mesmo nome que foi dado no favorite.component.ts
+    onFavoriteChanged()  Mesmo nome que foi dado no app.component.ts
+-->
+<favorite
+    (change)="onFavoriteChanged($event)"
+    [isFavorite]="post.isFavorite"
+>
+</favorite>
+
+<pre>
+    appComponent.post.isFavorite: {{post.isFavorite}}
+</pre>

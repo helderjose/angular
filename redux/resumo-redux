@@ -1,0 +1,49 @@
+versões para esses exemplos:
+ng --version
+node -v
+angular-cli 1.0.0-beta.16
+node: 6.9.1
+
+configuração ambiente:
+nvm install v6.9.1
+nvm alias default v6.9.1 
+node -v
+
+npm install -g angular-cli@1.0.0-beta.26
+ng --version
+
+
+------------------------------
+----- installing-redux -----
+------------------------------
+Configuração inicial do redux.
+
+
+-----------------------------------
+----- working-with-actions -----
+-----------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+-----------------------------------
+----- the-select-decorator -----
+-----------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+-----------------------------------
+----- avoiding-state-mutation -----
+-----------------------------------
+assign e tassign
+Olhar o arquivo leiaMe do projeto.
+(depois assistir com mais calma esse vídeo)
+
+
+------------------------------
+----- using-immutable-js -----
+------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+
+redux-dev-tools

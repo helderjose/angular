@@ -1,0 +1,14 @@
++ app-error-handler.ts
++ app.module.ts
+    - Pesquise por "ErrorHandler"
++ posts.component.ts
++ post.service.ts
+
+
+Como testar o exemplo:
++ Clique em delete, verá a mensagem de que já foi deletado.
++ Vá no post.service.ts use a parte da url inválida para ver o erro do app-error-handler.ts
+
+
+npm install
+ng serve

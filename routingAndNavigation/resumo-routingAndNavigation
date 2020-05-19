@@ -1,0 +1,95 @@
+In this section:
++ Configuring routes;
++ Implementing simgle page applications (SPAs);
++ Working with route and query parameters;
++ Programmatic navigation.
+
+
+----- grade -----
+- Configuring routes;
+- Implementing single page applications (SPAs);
+- Working with route and query parameters;
+- Programmatic navigation
+
+---- steps -----
+- Configure the routes;
+- Add a router outlet;
+- Add links.
+
+
+
+------------------------------
+----- configuring-routes -----
+------------------------------
+Olhe o arquivo leiaMe no projeto
+
+
+-------------------------
+----- router-outlet -----
+-------------------------
+Só teoria.
+router-outlet é uma diretiva colocada no app.component.html
+
+
+-------------------------
+----- router-link -----
+-------------------------
+<a href
+<a routerLink
+<a [routerLink]
+Olhar explicação no arquivo leiaMe do projeto
+
+
+------------------------------
+----- router-link-active -----
+------------------------------
+routerLinkActive para mudar a cor do item selecionado no menu
+
+
+----------------------------------------
+----- getting-route-parameters -----
+----------------------------------------
+Olhe o arquivo leiaMe do projeto.
+
+
+
+----------------------------------------
+----- route-parameters-observables -----
+----------------------------------------
+Explica porque Route Parameters são Observables
+usa snapshot para pegar o novo parâmetro.
+Olhe o arquivo leiaMe do projeto.
+
+
+
+----------------------------------------
+----- routes-multiple-parameters -----
+----------------------------------------
+Olhe o arquivo leiaMe do projeto.
+
+
+------------------------------
+----- query-parameters -----
+------------------------------
+Olhe o arquivo leiaMe do projeto.
+
+
+
+---------------------------------------------
+----- subscribing-multiple-observables -----
+---------------------------------------------
+Olhe o arquivo leiaMe do projeto.
+
+
+------------------------------
+----- switchMap-operator -----
+------------------------------
+Assistir esse vídeo de novo, tem bastante explicação.
+map e switchMap
+
+
+-----------------------------------
+----- programmatic-navigation -----
+-----------------------------------
+Passa variável na url com botão submit
+this.router.navigate(['/followers'], { queryParams: { page: 1, order: 'newest' } ...

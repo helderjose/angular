@@ -1,0 +1,11 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
+
++ fake-backend.ts
+    - token com admin false
+
++ home.component.html
+    - authService.currentUser.admin
+

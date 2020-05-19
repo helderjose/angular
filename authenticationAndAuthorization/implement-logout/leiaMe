@@ -1,0 +1,12 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
++ home.component.html
+    - (click)="authService.logout()
++ auth.sevice.ts
+    - logout
+
+
+Teste:
+Faça login e logout, olhe no localStorage do navegador que o token vai aparecer e sumir.

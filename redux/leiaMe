@@ -1,0 +1,88 @@
+===== Redux Implementation for Angular =====
+* ngrx/store: github.com/ngrx/store
+* ng2-redux: github.com/angular-redux/ng2-redux
+
+===== comandos para executar esse projeto =====
+Esse projeto usa uma versão antiga, faça os seguintes passos:
+ng --version
+npm install angular-cli@1.0.0-beta.26 -g    //abra um novo terminal após o comando
+ng --version
+npm install
+ng serve
+- os comandos abaixo é para criar um projeto do zero.
+ng init
+npm install redux ng2-redux --save
+
+
+===== 246. Dealing with Complex Domains =====
+-- não fiz, exemplo veio com erro de compilação mas a aplicação funciona, assitir e tentar arrumar.
++ olhar as pastas "before" e "after".
++ store.ts
++ messages
++ tasking
+
+===== 245. Refactoring Fat Case Statements =====
++ store.ts
+    - criar as functions para chamar no switch;
+    - cria a classe para não ficar repetindo o state e action (passa no construtor). Olhar as três partes comentadas.
+    não funcionout por causa do return, mas é uma forma de evitar a repetição de "state" e "action"
+
+===== 244. Calling Backend APIs =====
+- não fiz esse exemplo, ele crio um todo.service.ts, Assitir de novo e tentar fazer.
++ "actions.ts", "store.ts"
+
+
+===== 243. Redux DevTools =====
+Instale o Redux DevTools no chrome e no firefox para a aplicação continuar funcionando.
+- pasta redux-demo-2
+- Pesquise no google por "chrome redux devtools ", instale a extensão no chrome;
++ app.module.ts
+    - "DevToolsExtension", "isDevMode"
+    - execute o projeto e clique no ícone do "Redux devTools" no chrome
+
+===== 242. Exercise =====
+
+===== 241. Using Immutable.js =====
+npm install immutable --save
++ app.module.ts
+    - "immutable"
++ store.ts
+    - "rootReducer"
++ app.component.ts
+    - alteração no construtor, "@select(s => s.get('counter')) count;"
+
+===== 240. Avoiding State Mutation =====
++ store.ts
+    - npm install tassign --save
+    - "Object.assign", "tassign"
+
+
+
+===== 239. The Select Decorator =====
++ app.component.ts
+    - "ngRedux.subscribe(() => {", "select"
+    - "newMessages", "newMessagesCount"
++ app.component.html
+    - "async"
++ store.ts
+    - "messaging"
+
+
+===== 238. Working with Actions =====
++ app.component.html
++ app.component.ts
+    - "NgRedux", "constructor", "increment()"
++ store.ts
+    - "switch", "INITIAL_STATE"
++ actions.ts
++ app.module.ts
+    - "INITIAL_STATE"
+
+
+===== 237. Installing Redux =====
+- leia o começo do arquivo, ensina a configuração desse projeto.
++ app/store.ts
++ app.module.ts
+    - "ng2-redux"
+    - "store"
+    - constructor

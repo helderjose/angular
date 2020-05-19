@@ -1,0 +1,7 @@
++ panel.component.html
++ app.component.html
+
+
+----- comandos -----
+npm install
+ng serve

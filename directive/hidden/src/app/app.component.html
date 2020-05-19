@@ -1,0 +1,12 @@
+<!--
+    Quando usamos hidden e a condição é false o elemento continua no DOM é igual o display none do css.
+    Nesse caso o DOM fica maior e usa mais memória, é mais recomendado ngIf.
+    Use [hidden] for small element trees.
+    Use [ngIf] for large element trees.
+-->
+<div [hidden]="courses.length == 0">
+    List of courses
+</div>
+<div [hidden]="courses.length > 0">
+    No courses yet
+</div>

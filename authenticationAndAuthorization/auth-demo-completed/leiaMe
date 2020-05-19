@@ -1,0 +1,79 @@
+login para testar a aplicação
+mosh@domain.com
+1234
+
+O campo "secret" do jwt é para o usuário nao conseguir decodificar o token.
+O campo "secret" fica só no server.
+
+
+===== 151. Accessing Protected  aplicação Resources =====
++ order.service.ts
+
+
+===== 150. Protecting Routes Based on the User's Role =====
+ng g service servies/admin-auth-guard
++ app.module.ts
+    - "canActivate"
++ admin-auth-guard.services.ts
+    - 
+
+
+===== 149. Redirecting Users After Logging in =====
+- Redireciona para a página "admin", depois de logar. (NÃO FUNCIONOU)
+
++ auth-guard.service.ts
+    - "queryParams"
++ login.component.ts
+    - "ActivatedRoute"
+
+
+===== 148. CanActive Interface =====
+ng g service services/auth-guard
+- Esse exemplo redireciona para outra página caso o usuário digite a url diretamente;
+- Entre no site angular.io e pesquise por "CanActivate";
+
+
++ auth-guard.service.ts
+    - "canActivate"
++ app.module.ts
+    - "canActivate", "AuthGuard"
+
+
+===== 147. Getting the Current User =====
++ home.component.html
+    - "Welcome {{ authService.currentUser.name }}"
++ auth.service.ts
+    - currentUser
+
+
+===== 146. Showing or Hiding Elements based on User's Role =====
+jwt.io, no payload tem a propriedade "admin: true"
+
++ auth.service.ts
+    - "currentUser"
++ home.component.html
+    - ngIf com o "admin"
+
+
+===== 145. Showing or Hiding Elements =====
+npm install angular2-jwt --save
+
++ auth.service.ts
+    - "isLoggedIn()"
++ home.component.html
+    - "routerLink="/admin", olhar o ngIf"
+
+
+===== 144. Implement Logout =====
+Remove o JWT do local storage.
+
++ home.component.ts
++ home.component.html
++ auth.service.ts
+    - logout
+
+===== 143. Implmentin Login =====
+Nesse exemplo é implementado o login usando o fake-backend.ts para simular um servidor.
+
++ services/auth.service.ts
++ login/login.component.ts

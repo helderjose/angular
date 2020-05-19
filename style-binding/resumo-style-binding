@@ -1,0 +1,6 @@
+Aplica inline style de forma dinâmica usando programação no component.
+Style Object DOM Properties
+https://www.w3schools.com/jsref/dom_obj_style.asp
+
+isActive = false;
+<button [style.backgroundColor]="isActive ? 'blue' : 'orange'">Save</button>

@@ -1,0 +1,25 @@
+
+<!--
+  Conteúdo desse exemplo:
+  checkbox
+-->
+<form #f="ngForm" (ngSubmit)="submit(f)">
+
+  <div class="checkbox">
+    <label>
+      <input
+        type="checkbox"
+        ngModel name="isSubscribed"
+      > Subscribe to mailing list
+    </label>
+  </div>
+
+  <p>
+    <!-- | json imprime no formato json -->
+    {{ f.value | json }}
+  </p>
+
+  <button class="btn btn-primary"
+    [disabled]="!f.valid"
+  >Submit</button>
+</form>

@@ -1,0 +1,26 @@
+<!--
+    Pesquise por "ngForOf" no site do angular.io.
+
+    trackBy: remova o trackBy da tag li abra o inspetor de elementos e clique no botão
+    "Load Courses", repare que o DOM é atualizado toda vez que clica no botão,
+    coloque o traBy de volta no li e clique no botão novamente, repare que o DOM
+    não é atualizado porque os objetos são os mesmos.
+
+    Se você tem uma lista pequena e não tem problema de performance, não use trackBy porque você
+    só vai escrever código desnecessário.
+    Se você tiver uma lista grande e tiver problema de performance com observer use trackBy
+    para melhorar a performance.
+-->
+
+<button (click)="loadCourses()">Load Courses</button>
+<button (click)="onAdd()">Add</button>
+<ul>
+    <li *ngFor="let course of courses;
+            index as i;
+            even as isEven;
+            trackBy: trackCourse">
+        {{ i }} - {{ course.name }} - <span *ngIf="isEven">(even)</span>
+        <button (click)="onRemove(course)">Remove</button>
+        <button (click)="onChange(course)">Change</button>
+    </li>
+</ul>

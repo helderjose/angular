@@ -1,0 +1,29 @@
+{{course.title}} <br/>
+{{course.title | uppercase}} <br/>
+{{course.title | uppercase | lowercase}} <br/>
+<br/><br/>
+
+{{course.students}} <br/>
+{{course.students | number}} <br/>
+<br/><br/>
+
+{{course.rating}} <br/>
+{{course.rating | number}} <br/>
+{{course.rating | number:'1.2-2'}} <br/> <!-- 1.2-2 = mínimo de duas casas decimais e no máximo duas casas decimais -->
+{{course.rating | number:'1.1-1'}} <br/>
+{{course.rating | number:'2.1-1'}} <br/>
+<br/><br/>
+
+{{course.price}} <br/>
+{{course.price | currency}} <br/>
+{{course.price | currency:'AUD'}} <br/> <!-- Australian Dollar -->
+{{course.price | currency:'AUD':false}} <br/> <!-- false para nao mostrar o currency symbol $ -->
+{{course.price | currency:'AUD':false:'3.2-2'}} <br/> <!-- 3.2-2 = mínimo de três dígitos inteiros 002,56 -->
+<br/><br/>
+
+
+<!-- pesquise por DATEPIPE no site andular.io para ver os formatos disponíveis -->
+{{course.releaseDate}} <br/>
+{{course.releaseDate | date}} <br/>
+{{course.releaseDate | date:'shortDate'}} <br/>
+<br/><br/>

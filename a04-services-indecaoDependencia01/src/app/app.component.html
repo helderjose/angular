@@ -1,0 +1,37 @@
+<h1>
+  {{title}}
+</h1>
+
+<div style="background-color: orange;">
+
+  <h2>Service e Injeção Dependência</h2>
+  <p>Hello World</p>
+
+  <cursos-lista></cursos-lista>
+
+  <p>
+    Esse exemplo usa o metadado templateUrl, que é o uso
+    de arquivo .html
+  </p>
+</div>
+
+<div>
+  <p>Tutorial</p>
+  <ul>
+    <li>
+      <p>
+        Crie o arquivo cursos.service.ts<br/>
+        Decore-a com @Injectable.
+      </p>
+    </li>
+    <li>
+      <p>
+        No cursos.component.ts<br/>
+        Import a classe CursosService (que virou um fornecedor quando foi marcada com @Injectable).<br/>
+        Coloque a classe 'CursosService' no metadado 'providers'.<br/>
+        Injete 'CursosService' no construtor.<br/>
+        Cheme o método 'getCursos()' do 'CursosService'.<br/>
+      </p>
+    </li>
+  </ul>
+</div>

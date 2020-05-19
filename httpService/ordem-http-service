@@ -1,0 +1,19 @@
+getting-data
+creating-data
+updating-data
+deleting-data
+on-init-interface
+separation-of-concerns -> só teoria
+extracting-a-service
+handling-errors -> só teoria
+handling-unexpected-errors
+handling-expected-errors
+throwing-application-specific-errors
+handling-bad-request-errors
+importing-observable-operators-factory-methods
+global-errors-handling
+extracting-reusable-error-handling-method
+extracting-reusable-data-service
+map-operator
+optimistic-pessimistic-updates
+observables-promises

@@ -1,0 +1,31 @@
+npm install
+ng serve
+
++ app/store.ts
+
++ app.module.ts
+    - Olhar comentários.
+
+
+
+
+
+Criar o projeto do zero.
+
+Observasões do exemplo:
+Versão Node e Angular:
+nvm install v6.9.1
+nvm alias default v6.9.1 
+node -v
+
+npm install -g angular-cli@1.0.0-beta.26
+ng --version
+
+Garanta que está usando no package.json (por causa de incompatibilidade)
+"@angular/common": "^2.3.1",
+
+
+Criação do projeto.
+ng init -y --skip-git   //cria o projeto angular sem git.
+npm install redux ng2-redux --save
+

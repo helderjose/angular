@@ -1,0 +1,13 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
++ auth.service.ts
+    - "map"
+
++ app.module.ts
++ fake-backend.ts
+
+
+Teste:
+clique em login, passe o usuário e senha do começo do arquivo.

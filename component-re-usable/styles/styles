@@ -1,0 +1,13 @@
+Fala sobre as três formas de usar css no component.
+
+@Component({
+  outras propriedades aqui,
+  styles: [` css aqui `],
+  styleUrls: ['./favorite.component.css']  //nesse caso stylesUrls vai sobrescrever o css de styles: [`...`]
+
+})
+
+Usar a tag style no próprio arquivo .html
+<style> css aqui: sobrescreve os css de @Component </style>
+
+

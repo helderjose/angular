@@ -1,0 +1,10 @@
+O que é Angular?
+A framework for building client applications in HTML, CSS and JavaScript / TypeScript
+
+---------- Component ------------
+- Create a component;
+- Register it in a module;
+- Add an element in an HTML markup
+
+Module
+

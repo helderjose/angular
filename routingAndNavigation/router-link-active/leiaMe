@@ -1,0 +1,9 @@
+Nesse exemplo não precisa olhar os componentes, é apenas as rotas.
+
++ navbar.component.html
+    routerLinkActive
+
+
+
+Testes do exemplo:
+Clique no menu.

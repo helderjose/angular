@@ -1,0 +1,11 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
++ auth.service.ts
+    - npm install angular2-jwt --save
+    - isLoggedIn()
+    - com jwt token, consigo colocar uma data de expiração no token.
+
++ home.component.html
+    - *ngIf nos <li>

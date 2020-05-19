@@ -1,0 +1,23 @@
+<h3>Como Adicionar o Bootstrap no Projeto</h3>
+
+<ul>
+  <li>
+    <p>npm install bootstrap --save <br/>
+      Olhe o arquivo package.json, veja que foi adicionada a seguinte linha: <b>"bootstrap": "^4.1.0"</b> ou outra versão<br/>
+      ^4.1.0 = major.minor.patch<br/>
+      ^ This carrot character means we can use the most recent major version. So we can use version 4.4, 4.5, 4.9<br/>
+      node_modules/bootstrap/dist/css
+    </p>
+  </li>
+  <li>
+    Import o css do bootstrap no <b>src/styles.css</b> da seguinte forma,
+    <b>
+      @import "~bootstrap/dist/css/bootstrap.css";
+    </b>
+  </li>
+  <li>Use as classes css do bootstrap como nos exemplos abaixo</li>
+</ul>
+
+<div>
+  <button class="btn btn-primary">Save</button>
+</div>

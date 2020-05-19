@@ -1,0 +1,8 @@
+----- Unexpected ------
+- Server is offline
+- Network is down
+- Unhandled exceptions
+
+----- Expected -----
+- "Not Found" erros (404)
+- "Bad request" erros (400)

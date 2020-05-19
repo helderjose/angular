@@ -1,0 +1,19 @@
+https://cli.angular.io/
+
+===== instalar angular-cli =====
+Obs: sudo só precisa dependendo do sistema que vocẽ está usando.
+
+sudo npm install -g @angular/cli   //instala a versão mais nova (acho que depende da versão do node).
+
+===== desinstalar angular-cli =====
+sudo npm uninstall -g angular-cli
+npm cache clean
+
+===== versões antigas =====
+ng --version
+npm install -g angular-cli@1.0.0-beta.26	//instala versão antiga do angular-cli
+sudo npm install angular-cli -g
+
+
+
+

@@ -1,0 +1,25 @@
+Clonar, colocar o path aqui, fazer anotações (só no meu notebook).
+
+interceptor
+pesquisar sobre interceptor
+
+----- site angular.io -----
+https://angular.io/guide/http#intercepting-requests-and-responses
+tem código para download
+----- site angular.io  fim -----
+
+
+
+---- exemplo 1 -----
+https://codinglatte.com/posts/angular/building-http-interceptor-angular-5/
+https://github.com/MainaWycliffe/angular-httpinterceptor
+
+executar o projeto:
+No package.json mude 
+de  : "@angular/cli": "1.5.0",
+para: "@angular/cli": "^1.5.0",
+
+npm install
+./node_modules/@angular/cli/bin/ng serve  //talvez precise do sudo
+http://localhost:4200/
+---- exemplo 1 fim -----

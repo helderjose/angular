@@ -1,0 +1,22 @@
+npm install -g @angular/cli
+ng --version
+ng --help
+
+ng init		(Inicia um projeto do angular-cli em um diretório existente.)
+ng new --help
+ng new myApp
+
+npm install	(baixa a pastas node_modules com as dependências)
+ng serve --help
+ng serve
+ng serve --port 8080
+
+ng g c component-name
+ng g component component-name
+
+ng g m module-name
+ng g module module-name
+
+--- fazer o de criar service -----
+ng g s service-name
+

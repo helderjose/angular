@@ -1,0 +1,6 @@
+===== 156. Angular Compiler in Action =====
++ package.json
+    - "@angular/compiler-cli": "^4.0.0"
+no terminal execute
+node_modules/.bin/ngc
+vai gerar uns arquivos como "home.component.css.shim.ngstyle.ts" por exemplo

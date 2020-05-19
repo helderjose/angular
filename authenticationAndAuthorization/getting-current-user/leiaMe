@@ -1,0 +1,9 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
++ auth.service.ts
+    - get currentUser()
+
++ home.component.html
+    - authService.currentUser.name

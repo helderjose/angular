@@ -1,0 +1,3 @@
+ngForm directive exposes an output property which you saw earlier, and is an ngSubmit, and we use this to handle the submit event of Forms.
+
+ngModelGroup does not have that output property because it doesn't make sense to submit a part of a form.

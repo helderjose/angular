@@ -1,0 +1,11 @@
+executar um projeto que não tenha a pasta node_modules
+comandos, exeutar dentro da pasta do projeto:
+npm install (vai baixar a pasta node_modules)
+ng serve (executa o projeto)
+
+----- css -----
+Quando precisar fazer algum ajuste específico, olhe os atributos que o angular coloca na tag html, isso pode ajudar a resolver problemas específicos. Cuidado ao usar essa dica, quando executa o projeto em modo de produção algumas dessas tags não são colocadas na tag html pelo Angular, então, ao usar um atributo desse faça um teste rodando o projeto em modo de produção.
+Ex:
+select[ng-reflect-model] {
+  css aqui
+}

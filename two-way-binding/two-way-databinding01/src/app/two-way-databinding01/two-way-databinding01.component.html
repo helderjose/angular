@@ -1,0 +1,15 @@
+<!--
+  Usando property binding: do Component para a view
+-->
+usando property binding: do component para a view<br/>
+mude o valor e aperte enter<br/>
+<input [value]="email" (keyup.enter)="onKeyUp()">
+
+<br/><br/><br/>
+<p>
+  Usando two way binding<br/>
+  no app.module.ts, faça o seguinte<br/>
+  <b>import FormsModule from '@angular/forms';</b><br/>
+  <b>no metadado imports importe o FormsModule</b>
+</p>
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()">

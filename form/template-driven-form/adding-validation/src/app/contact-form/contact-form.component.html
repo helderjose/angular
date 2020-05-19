@@ -1,0 +1,30 @@
+
+<!--
+  Conteúdo desse exemplo:
+  required
+  *ngIf="firstName.touched && !firstName.valid"
+-->
+<form>
+  <div class="form-group">
+      <label for="firstName">First name</label>
+      <input
+        required
+
+        type="text"
+        id="firstName" class="form-control"
+        name="firstName" #firstName="ngModel"
+        ngModel
+        (change)="log(firstName)"
+      >
+
+      <div
+        *ngIf="firstName.touched && !firstName.valid"
+
+        class="alert alert-danger"
+      >
+        First Name is required
+      </div>
+  </div>
+
+  <button class="btn btn-primary">Submit</button>
+</form>

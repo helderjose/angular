@@ -1,0 +1,27 @@
+<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="onClick()">Me clique!</button>
+      <br/><br/>
+
+      <input type="text"
+        (keyup)="onKeyup($event)"
+        (keyup.enter)='onSave($event.target.value)'
+        (blur)="onSave(campo.value)"
+        #campo> <!-- campo é uma vairável local -->
+
+      <p>
+        Conteudo atual: {{ conteudoAtual }}<br/>
+        Conteudo Salvo: {{ conteudoSalvo }}
+      </p>
+
+      <span
+        (mouseover)="onMouseSpan()"
+        (mouseout)="onMouseSpan()"
+        [class.highlight]="isMouseOver">
+          Passe o mouse sobre mim!
+      </span>
+    </div>
+  </article>
+</section>

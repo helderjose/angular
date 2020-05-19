@@ -1,0 +1,20 @@
+Nesse exemplo não precisa olhar os componentes, é apenas as rotas.
+
++ app.module.ts
+    - RouterModule
+    - specific router tem que vir primeiro
+
+
+Passos iniciais para configurar rota.
++ Configure the routes
+    - RouterModule no app.mocule.ts
++ Add a router outlet
+    - router-outlet no app.component.html
+
+
+Testes do exemplo, acesse:
+http://localhost:4200
+http://localhost:4200/followers
+http://localhost:4200/followers/1
+http://localhost:4200/posts
+http://localhost:4200/urlinvalidaaqui

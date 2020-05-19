@@ -1,0 +1,22 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
++ auth-guard.service.ts
+    - "canActivate".
+
++ login.component.ts
+    - "returnUrl"
+
++ app.module.ts
+    - "AuthGuard"
+
+
+
+Teste:
+- Faça logout;
+- http://localhost:4200/admin  (vai ser redirecionado para tela login);
+- Login na aplicação, (deve ir para a página admin).
+
+Obs: O usuário é redirecionado para a tela que tentou acessar antes de fazer login. Isso
+só vai acontecer na rota que está usando o "canActivate" do "auth-guard.service.ts"

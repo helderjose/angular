@@ -1,0 +1,65 @@
+auth-demo-completed: projeto finalizado e com anotações.
+auth-demo-starter: não alterei esse, é um projeto para começar implementar o login
+
+npm install angular2-jwt --save
+
+------------------------------
+----- JSON Web Tokens -----
+------------------------------
+https://jwt.io/
+Gera token para várias linguagens.
+Assisitir esse vídeo e fazer anotações.
+
+
+------------------------------
+----- implementing-login -----
+------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+------------------------------
+----- implement-logout -----
+------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+-----------------------------------
+----- showing-hiding-elements -----
+-----------------------------------
+npm install angular2-jwt --save
+Esconde ou mostra alguns campos se o usuário não estiver logado.
+
+
+--------------------------------------------------
+----- showing-hiding-elements-users-role -----
+--------------------------------------------------
+Esconde o link "admin" quando loga com usuaŕio que não é admin.
+
+
+-----------------------------------
+----- getting-current-user -----
+-----------------------------------
+Exibe o nome do usuário logado.
+
+-----------------------------------
+----- canActivate-interface -----
+-----------------------------------
+A rota "path: 'admin'" só é permitida se o usuário estiver logado.
+
+
+---------------------------------------------
+----- redirecting-users-after-loggin-in -----
+---------------------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+--------------------------------------------------
+----- protecting-routes-based-users-role -----
+--------------------------------------------------
+Olhar o arquivo leiaMe do projeto.
+
+
+---------------------------------------------
+----- accessing-protected-API-resources -----
+---------------------------------------------
+Olhar o arquivo leiaMe do projeto.

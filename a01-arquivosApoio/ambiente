@@ -1,0 +1,7 @@
+nodejs.org
+Use o nvm (Node Version Manegement)
+
+
+node v6.10.3
+sudo npm uninstall -g @angular/cli
+sudo npm install -g angular-cli@1.1.0

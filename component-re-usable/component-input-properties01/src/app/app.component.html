@@ -1,0 +1,24 @@
+<!--
+    O que está entre [ colchetes ] é uma input property no favorite.component.ts
+-->
+<p>
+    abra o console e clique no ícone<br/>
+    <b>Nesse exemplo temos:</b><br/>
+    Input Properties<br/>
+</p>
+
+<!--
+    Chama o onClick do favorite.component.ts.
+    [isSelected]="post.isFavorite" faz binding do isSelected do favorite.component com o
+    post.isFavorite.
+    Ao clicar chama onClick do favorite.component que altera favoriteComponent.isSelected.
+    appComponent.post.isFavorite nunca é alterado
+-->
+<favorite
+    [isSelected]="post.isFavorite"
+>
+</favorite>
+
+<pre>
+    appComponent.post.isFavorite: {{post.isFavorite}}        //nunca eh alterado
+</pre>

@@ -1,0 +1,37 @@
+<!--
+  Styling Invalid Input Fields: olhar o arquivo styles.css
+-->
+
+<!--
+  ngModel -> Angular will create and control objects and associated with this input field under the hood.
+  Precisa colocar o "name" no input.
+  #firstName é um template variable.
+  #firstName="ngModel" it's going to set this template variable
+    to the ngModel directive that is applied on this input field.
+  
+  ngModel name="firstName" -> Angular automatically creates an instance of the form control class,
+    and associates it with that field.
+-->
+<form>
+  <div class="form-group">
+      <label for="firstName">First name</label>
+      <input type="text"
+        id="firstName" class="form-control"
+        name="firstName" #firstName="ngModel"
+        ngModel
+        (change)="log(firstName)"
+      >
+  </div>
+
+  
+  
+  <!-- pode ignorar daqui para baixo nesse exemplo. -->
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea id="coment" class="form-control"
+      cols="30" rows="10"
+      ngModel name="comment"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>

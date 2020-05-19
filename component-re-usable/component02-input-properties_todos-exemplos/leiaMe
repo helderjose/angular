@@ -1,0 +1,16 @@
+Esse exemplo está cobrindo muita coisa, tentar separar mais ou menos assim:
+
+Section: 5 (curso udemy)
+
+input properties
+output properties
+passing event data
+
+view encapsulation
+
+ngContent e ngContainer
+
+
+----- comandos -----
+npm install
+ng serve

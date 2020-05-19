@@ -1,0 +1,61 @@
+------ Observables vs Promises ---------
+- posts.component.ts
+    deletePost(...){...}
+- data.service.ts
+    delete(...){...}
+
+olhar o operador .retry no delete do data.service.ts
+
+
+Dê preferência ao Observable.
+Observables are lazy, nothing happens until we subscribe to them.
+
+Promises are eager, we don't have to call the "then" method.
+
+*** Take aways ***
+* You can always convert observables to promises;
+* Prefer observables;
+* They allow reactive programming;
+* They provide a buch of useful operators;
+* Observables are lazy.
+
+
+------ Optmistic vs Pessimistic Updates ------
+- posts.component.ts 
+    createPost(){....}  - foi alterado para Optmistic
+    deletePost(){...} - foi alterado para Optmistic
+- data.service.ts
+    create(...){...} simula uma resposta com erro do servidor
+    delete(...){...} simula uma responsta com erro do servidor
+
+
+
+
++++++ Optmistic +++++
+hopeful
+Nesse exemplo inserimos o novo post no array assim que aperta "enter", se der falha, removemos do array. Com essa técnica o
+delay da resposta do servidor não fica visível se tudo correr bem com a operação.
+
++++++ Pessimistic +++++
+hopeless
+
+
+
+----------- The Map Operator ---------
+com map operator podemos transformar os itens em um observable
+- data.service.ts
+    import 'rxjs/add/operator/map';
+    use map no método getAll()
+
+- posts.component.ts
+    altere ngOnInit() com posts =>....
+
+----- Extracting  a Reusable Data Service -----
+- services/data.service.ts
+- post.service.ts
+- posts.component.ts
+
+-------- Extracting a Reusable Error Handling Method ------------
+- post.service.ts
+  private handleError(error: Response)...
+- passa uma referência do método handleError nos ".catch" nos métodos do service

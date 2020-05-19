@@ -1,0 +1,14 @@
+injectable: vi no service "service01"
+
+Parece que é quando quero injetar uma classe na outra (um service no outro).
+
+https://angular.io/api/core/Injectable
+https://angular.io/guide/dependency-injection
+-------------
+
+
+Exercícios do curso da udemy
+section 2 like.component.zip
+section 3: Assigment 1: List of Authors
+section 4: Assigment 2: Favorite Component
+e etc

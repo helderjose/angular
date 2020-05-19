@@ -1,0 +1,149 @@
+Ordem de estudos:
+anotacoes-gerais
+----- section 3 udemy -----
+component
+template
+directive - tem muitos exemplos aqui, ir fazendo aos poucos
+service
+dependency injection
+Interpolation
+
+----- section 4 udemy -----
+Property Binding
+Attribute Binding
+Bootstrap 01 - como adicionar o bootstrap no projeto
+Class Binding - colocar classe css de forma dinâmica usando programação no component.
+Style Binding - Aplica inline style de forma dinâmica usando programação no component.
+Event Binding - event bubbles
+Event Filtering - (keyup.enter)="myFunction()"
+Template Variables
+Two-way Binding - <input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+Pipes - formatar data, números, moedas, uppercase e etc.
+Custom Pipes - criar meu próprio pipe. {{ text | summary:10 }}
+
+----- section 5 udemy -----
+--- pasta: component-re-usable
+Input Properties
+Aliasing Input Properties
+Output Properties
+Passing Event Data
+Aliasing Output Propesties
+Templates  -> Quando usar template literal ` html aqui ` ou template externo templateUrl
+Styles   -> Prioridade de css "quem sobrescreve quem" styles: [` css aqui `], styleUrls: ['./favorite.component.css'] e <style></style> no html.
+View Encapsulation   -> Emula o shadow DOM (assistir o vídeo de novo e fazer o exemplo completo)
+ngContent -> copiar esse exemplo para a pasta directive
+ngContainer -> copiar esse exemplo para a pasta directive
+
+
+----- section 6 udemy -----
+--- pasta: directive
+pulei por enquanto, tem muitos exemplos, ir fazendo aos poucos.
+
+
+
+----- section 7 udemy -----
+--- pasta: form -> template-driven-form
+ngModel
+Adding Validation  -> validação, início.
+Specific Validation Errors   -> required, minLength, maxLength, firstName.touched && !firstName.valid, firstName.errors.required e minlength
+Styling Invalid Input Fields   -> css no input inválido
+Cleaner Templates  -> não tem nada, é só identação de código.
+ngForm  -> <form #f="ngForm" (ngSubmit)="submit(f)">
+ngModelGroup
+Control Classes and Directives
+Disabling the Submit Button
+Working with Check Boxes
+Working with Drop-down Lists
+Working with Radio Buttons
+
+
+----- section 8 udemy -----
+--- pasta: form -> reactive-forms
+Creating Controls Programmatically
+Adding Validation
+Specific Validation Errors  -> minlength, maxlength e etc
+Implementing Custom Validation  -> cria um validation que verifica se tem espaço no campo username
+Asynchronous Operations   -> Esse exemplo ainda não tem o resultado esperado, (não acontece nada), continua no próximo exemplo
+Asynchronous Validators
+Showing a Loader Image
+Validating the Form Input Upon Submit
+Nested FormGroups
+FormArray
+FormBuilder
+
+----- section 9 udemy -----
+--- pasta: httpService
+Getting Data
+Creating Data
+Updating Data
+Deleting Data
+OnInit Interface
+Separation of Concerns -> só teoria
+Extracting a Service
+Handling Errors -> só teoria
+Handling Unexpected Errors
+Handling Expected Errors
+Throwing Application-specific Errors
+Handling Bad Request Errors
+Importing Observable Operators and Factory Methods
+Global Errors Handling
+Extracting a Reusable Error Handling Method
+Extracting a Reusable Data Service
+The Map Operator
+Optimistic vs Pessimistic Updates
+Observables vs Promises
+
+
+----- section 10 udemy -----
+--- pasta: routingAndNavigation
+Configuring Routes
+RouterOutlet -> só teoria.
+RouterLink
+RouterLinkActive
+Getting the Route Parameters
+Why Route Parameters Are Observables
+Routes with Multiple Parameters
+Query Parameters
+Subscribing to Multiple Observables
+The SwitchMap Operator
+Programmatic Navigation
+
+
+----- section 11 udemy -----
+--- pasta: authenticationAndAuthorization
+Architecture  -> teoria, assistir de novo e fazer anotações
+JSON Web Tokens  -> teoria, assistir de novo e fazer anotações
+Starter Code  -> explica a estrutura básica do projeto inicial.
+Implementing Login
+Implement Logout
+Showing or Hiding Elements
+Showing or Hiding Elements Based on the User's Role
+Getting the Current User
+CanActivate Interface
+Redirecting Users After Loggin In
+Protecting Routes Based on The User's Role
+Accessing Protected API Resources
+
+
+
+----- section 16 udemy -----
+--- pasta: redux
+What is Redux -> teoria (assistir de novo quando estiver estudando teoria)
+Building Blocks of Redux -> teoria (assistir de novo quando estiver estudando teoria)
+Pure Functions -> teoria (assistir de novo quando estiver estudando teoria)
+Installing Redux
+Working with Actions
+The Select Decorator
+Avoiding State Mutation
+Using Immutable.js
+
+ESTOU AQUI
+
+Redux DevTools
+Calling Backeng APIs
+Refactoring Fat Case Statements
+Dealing with Complex Domains
+
+
+
+

@@ -1,0 +1,23 @@
++++++ Observable vs Promises +++++
+--- Observables ---
+Observables are lazy, nothing happens until you subscribe to them.
+retry(3), if the server fails, this observable will retry three times.
+
+--- Promises ---
+Promises are eager, so as soon as you create a promise, the code is executed.
+
+
+--- Take aways ---
++ You can always convert observables to promises;
++ Prefer observables;
++ They allow reactive programming;
++ They provide a bunch of useful operators;
++ Observables are lazy (nothing happens until you subscribe to them).
+
+
+só o método delete do posts.component.ts e data.service.ts foi usado nesse exemplo
+
+
+
+npm install
+ng serve

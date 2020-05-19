@@ -1,0 +1,12 @@
+npm install
+ng serve
+
++ app.component.ts
+    - três formar de acessar variável com decorator @select
++ app.component.html
+    - "async"
+
++ store.ts
+    - "messaging"
+
+Esse exemplo lê o state, o exemplo passado só escreve no state.

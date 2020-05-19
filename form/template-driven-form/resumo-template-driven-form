@@ -1,0 +1,95 @@
+Olhar o projeto desses exemplos, tem muita coisa para colocar aqui.
+
+--------------------
+----- ng-model -----
+--------------------
+<input type="text"
+  id="firstName" class="form-control"
+  name="firstName" #firstName="ngModel"
+  ngModel
+  (change)="log(firstName)"
+>
+log(x) {console.log(x)};
+
+
+------------------------------
+----- adding-validation -----
+------------------------------
+required
+firstName.touched && !firstName.valid
+
+
+----------------------------------------
+----- specific-validation-erros -----
+----------------------------------------
+minlength="3"
+maxlength="10"
+pattern="banana"  //expressão regular
+
+firstName.errors.minlength
+  First name should be minimum {{ firstName.errors.minlength.requiredLength }} characters.
+
+
+----------------------------------------
+----- styling-invalid-input-fields -----
+----------------------------------------
+.form-control.ng-touched.ng-invalid { border: 2px solid red; }
+
+
+------------------------------
+----- cleaner-templates -----
+------------------------------
+- não tem nada, é só identação de código.
+
+--------------------
+----- ng-form -----
+--------------------
+<form #f="ngForm" (ngSubmit)="submit(f)"> ... </form>
+
+submit(f) {
+  console.log(f);
+  console.log("f.valid: ", f.valid);
+}
+
+
+-------------------------
+----- ng-model-group -----
+-------------------------
+<div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="!contact.valid">contact msg erro aqui</div>
+
+
+
+---------------------------------------------
+----- control-classes-and-directives -----
+---------------------------------------------
+ngForm e ngModelGroup
+
+
+-----------------------------------
+----- disabling-submit-button -----
+-----------------------------------
+<form #f="ngForm" (ngSubmit)="submit(f)">
+   <button [disabled]="!f.valid" >
+
+
+----------------------------------------
+----- working-with-check-boxes -----
+----------------------------------------
+só coloca o ngModel e o name em um input type checkbox.
+
+
+----------------------------------------
+----- working-with-drop-down-lists -----
+----------------------------------------
+ngForm com [value]="animal.id" e [ngValue]="animal"
+select multiple
+
+
+----------------------------------------
+----- working-with-radio-buttons -----
+----------------------------------------
+radio button
+
+
+

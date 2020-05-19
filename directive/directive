@@ -1,0 +1,11 @@
+AngularJS directives are extended HTML attributes with the prefix ng-.
+
+No Angular virou *ngFor, *ngIf e etc
+
+ngFor
+courses = ['Angular 2', 'Java', 'Ext JS'];
+<li *ngFor="let course of courses">
+  {{course}}
+</li>
+
+Em uma aplicação real o courses vem de um serviço http e essa parte colocamos no service

@@ -1,0 +1,31 @@
+<!--
+  Conteúdo do exemplo:
+  Só mexeu no .ts
+-->
+
+
+<!--
+  obs: quando apertar enter pode demorar um pouco para aparecer no lis, é o tempo do
+  servidor responder.
+ -->
+<input
+  (keyup.enter)="createPost(title)" #title
+  type="text" class="form-control"
+>
+
+
+<br/><br/>
+<p>
+  Click em delete e espere a resposta do server.
+</p>
+<ul class="list-group">
+  <li
+    *ngFor="let post of posts"
+    class="list-group-item">
+
+    <button
+      (click)="deletePost(post)"
+      class="btn btn-default btn-sm">Delete</button>
+    {{ post.title }}
+  </li>
+</ul>

@@ -1,0 +1,54 @@
+In This Section:
+* What is Redux
+* When to use it and why
+* How to add Redux to an existing app
+* Redux DevTools
+* Best practices for large enterprise apps
+
+
+Redux is a library that helps you manage the state of your application.
+Use redux only if you're building a medium to large single page application with complex views and data flows.
+
+
+
+* What is Redux;
+* When to use it and why;
+* How to add Redux to an existing app;
+* Redux DevTools;
+* Best practices for large enterprise apps;
+
+
+=========================
+===== What is Redux =====
+=========================
+A library that helps you manage the state of your application.
+Obs: Use redux em média ou grande aplicação.
+
+----- Benefícios -----
+* Predictable application state;
+* Decoupled architecture;
+* Testability;
+* Great tooling;
+* Undo/redo;
+
+==============================
+===== When to Use Redux =====
+==============================
+* Independent copies of the same data in multiple places;
+* Multiple views that need to work with the same data and be in sync;
+* Data can be updated by multiple users;
+* Data can be updated by multiple actors;
+
+
+==============================
+===== Outras Anotações =====
+==============================
+----- Building Blocks of Redux -----
+* Store;
+* Actions;
+* Reducers;
+
+- The Store: A single JS object that contains the state of the application.
+- The Action: Plain JS objects that represent something that has happened.
+- Reducer: A function that specifies how the state changes in response to an action.
+A reducer does not modify the state. It returns the new state.

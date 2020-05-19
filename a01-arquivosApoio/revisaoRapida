@@ -1,0 +1,18 @@
+- Criar um Componente
+Module
+
+
+-------------- Componente ---------------
+- Crie um componente;
+ng g c cursos.componet
+Crie o arquivo do componente e declare uma classe nele.
+Import e declare a classe do componente no arquivo app.modules.ts
+
+-------------------- Module --------------------
+- Crie um componente;
+- Crie um módulo
+ng g m cursos.module
+Importe o componente no módulo, e use-o nos metadados "declarations", "imports" e "exports"
+Use o módulo em app.module.ts
+
+

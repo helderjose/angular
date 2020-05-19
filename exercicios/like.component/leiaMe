@@ -1,0 +1,6 @@
+executar o arquivo:
+tsc *.ts
+node main.js
+
+ou
+tsc *.ts --target ES5 && node main.js

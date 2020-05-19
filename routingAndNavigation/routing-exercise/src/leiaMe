@@ -1,0 +1,22 @@
+- Crie os componentes
+archive, home e not-found
+
+* app.module.ts
+- use RouterModule
+
+* app.component.html
+<router-outlet></router-outlet>
+
+* home.component.ts
+- declare a variável "archives"
+
+* home.component.html
+- ngFor nos "archives
+- use [routerLink] router linkLink directive
+
+* archive.component.ts
+- implement ngOnInit() e viewAll()
+
+* archive.component.html
+- exiba o arquivo selecionado
+- chame viewAll(0)

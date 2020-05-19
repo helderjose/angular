@@ -1,0 +1,31 @@
+------------------------------
+----- template-variables -----
+------------------------------
+O #email é o template variable.
+#email referencia o input field.
+O keyup.enter é um event filtering (tem explicação em outro exemplo)
+
+<input placeholder="email"
+#email
+(keyup.enter)="emailOnKeyUp(email.value)"
+>
+
+emailOnKeyUp(email) {   console.log("email: ", email); .....
+
+
+-------------------------
+----- template02 -----
+-------------------------
+@Component({
+    /*moduleId: module.id, em uma versao antiga pracisava disso*/
+    selector: 'usado para usar em outro component'
+    templateUrl: 'url para arquivo html'
+    styleUrls: 'array de arquivos css'
+})
+
+
+-------------------------
+----- template01 -----
+-------------------------
++ Template literal é o uso do acento grave (´) no metadado "template", exemplo: ´<p>hello world</p>´
++ Uso do seletor de um template de um component dentro do template de outro component

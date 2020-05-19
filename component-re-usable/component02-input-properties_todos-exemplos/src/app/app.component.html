@@ -1,0 +1,47 @@
+<!--
+    O que está entre [ colchetes ] é uma input property
+    O que está entre ( parenteses ) é uma output property
+
+    "change" é o nome que foi dado no favorite.component.ts
+    "onFavoriteChanged" é o nome que foi dado no app.component.ts
+-->
+<p>
+    abra o console e clique no ícone<br/>
+    <b>Nesse exemplo temos:</b><br/>
+    Input Properties<br/>
+    Aliasing Input Properties<br/>
+    Output Properties<br/>
+    Passing event Data<br/>
+    Aliasing Output Properties<br/>
+</p>
+<favorite
+    [isFavorite]="post.isFavorite"
+    (change)="onFavoriteChanged($event)">
+</favorite>
+<br/><br/><br/>
+
+
+
+<p>
+    <b>Nesse exemplo temos:</b><br/>
+    ng-content - <b>panel.component.html</b><br/>
+    ng-container - <b>app.component.html</b>
+</p>
+<!-- panel.component -->
+<bootstrap-panel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+        <p>some content here...</p>
+    </div>
+</bootstrap-panel>
+<br/><br/><br/>
+
+
+<!--
+<like
+    [likesCount]="tweet.likesCount"
+    [isActive]="tweet.isLiked"
+></like>
+
+-->

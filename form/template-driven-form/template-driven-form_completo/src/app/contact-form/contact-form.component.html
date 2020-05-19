@@ -1,0 +1,118 @@
+<!--
+  Styling Invalid Input Fields: olhar o arquivo styles.css
+-->
+
+
+<!-- ngForm - olhar os atributos da tag form. Obs: as validacoes funcionam sem o ngForm-->
+<form #f="ngForm" (ngSubmit)="submit(f)">
+
+  <div>
+    <b>Trabalhando com radio button</b>
+    <div *ngFor="let method of contactMethods" class="radio">
+      <label for="">
+        <input ngModel type="radio" name="contactMethod" [value]="method.id">
+        {{ method.name }}
+      </label>
+    </div>
+    <p>contactMethod = {{ f.value.contactMethod | json}}</p>
+  </div>
+
+  <div>
+    <b>trabalhando com drop-down list</b>
+    <p>
+      value vs ngValeu<br/>
+      value - passa apenas a propriedade do objeto json.<br/>
+      ngValue - passa o objeto json todo.<br/>
+      multiple - permite selecionar várias opções (segure shift ou ctrl).
+    </p>
+    <div class="form-group">
+      <label for="contactMethod">Contact Method</label>
+      <select multiple ngModel name="contactMethod" id="contactMethod" class="form-control">
+        <option value="">Selecione</option>
+        <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.name }}</option>
+        <option *ngFor="let method of contactMethods" [ngValue]="method">{{ method.name }}</option>
+      </select>
+    </div>
+    <p>contactMethod = {{ f.value.contactMethod | json}}</p>
+  </div>
+
+  <div>
+    <b>trabalhando com checkbox</b>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ngModel name="isSubscribed"> Subscribe to mailing list
+      </label>
+    </div>
+    <p>{{ f.value | json }}</p>
+  </div>
+
+  <!-- olhe o objeto no console -->
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="contact.touched && !contact.valid">ngModelGroup error here</div>
+    <div class="form-group">
+        <label for="name2">First Name 2 - exemplo ngModelGroup</label>
+        <input
+          required minlength="3" maxlength="10"
+          pattern="banana"
+          ngModel name="name2" #name2="ngModel"
+          (change)="log(name2)"
+          id="name2" type="text" class="form-control"
+        >
+        <div class="alert alert-danger"
+          *ngIf="name2.touched && !name2.valid"
+        >
+          <div *ngIf="name2.errors.required">First Name is required</div>
+          <!-- olhe no console o objeto de erro com suas propriedades -->
+          <div *ngIf="name2.errors.minlength">First name shoud be minium {{ name2.errors.minlength.requiredLength }} characters.</div>
+          <div *ngIf="name2.errors.pattern">First doesn't match the pattern.</div>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+      <label for="fruta">First Name - exemplo 02 error object - (required, minlength, maxlength, pattern)</label>
+      <input
+        required minlength="3" maxlength="10"
+        pattern="banana"
+        ngModel name="fruta" #fruta="ngModel"
+        (change)="log(fruta)"
+        id="fruta" type="text" class="form-control"
+      >
+      <div class="alert alert-danger"
+        *ngIf="fruta.touched && !fruta.valid"
+      >
+        <div *ngIf="fruta.errors.required">First Name is required</div>
+        <!-- olhe no console o objeto de erro com suas propriedades -->
+        <div *ngIf="fruta.errors.minlength">First name shoud be minium {{ fruta.errors.minlength.requiredLength }} characters.</div>
+        <div *ngIf="fruta.errors.pattern">First doesn't match the pattern.</div>
+      </div>
+  </div>
+
+
+  <div class="form-group">
+      <label for="firstName">First Name - exemplo 01 - (touched, valid)</label>
+      <input
+        required
+        ngModel name="firstName" #firstName="ngModel"
+        (change)="log(firstName)"
+        id="firstName" type="text" class="form-control"
+      >
+      <div class="alert alert-danger"
+        *ngIf="firstName.touched && !firstName.valid">First Name is required
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea
+      ngModel name="comment"
+      id="comment" cols="30" rows="10" class="form-control"></textarea>
+  </div>
+
+  <button
+    class="btn btn-primary"
+    [disabled]="!f.valid"
+  >Submit</button>
+  
+</form>

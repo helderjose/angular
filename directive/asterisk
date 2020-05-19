@@ -1,0 +1,14 @@
+Quando usamos o '*' asterisco o angula reescreve esse bloco usando ng-template
+Exemplo:
+<div *ngIf="myCondition">
+  my content
+</div>
+
+se transforma em
+
+<ng-template [ngIf]="myContition">
+   <div>
+      my content
+   </div>
+</ng-template>
+

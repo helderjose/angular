@@ -1,0 +1,15 @@
+------------------------------
+---------- service01 ----------
+------------------------------
+
+----- courses.service.ts -----
+getCourses() {... //na aplicação real aqui chamaria o servidor.
+
+----- courses.component.ts -----
+export class CoursesComponent {
+  courses;  //será preenchida no construtor
+  constructor(coursesService: CoursesService) {
+    this.courses = coursesService.getCourses();
+
+
+Colocar o CoursesService no metadado "providers" do app.module.ts

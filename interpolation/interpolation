@@ -1,0 +1,28 @@
+<p>{{ myVar }}</p>
+
+String interpolation é o uso do {{ }} para renderizar string, é indicado quando quero apenas exibir algo na tela.
+Interpolation é uma sintaxe sugar para o property binding (por traz o Angular tranforma a interpolation em property binding)
+
+Property binding: Com property binding nós ligamos uma propriedade de elemento do DOM como a propriedade 'src'  da tag 'img' por exemplo com a propriedade do component.
+Resumindo, o Angular tranforma isso <img src="{{urlImg}}"/> nisso <img [src]="urlImg"/>
+
+Em div, p, h e etc a interpolation é mais simples e clara.
+<p>{{ myVar }}</p>
+
+Nos casos abaixo o property binding é mais simples e claro.
+<!-- usando interpolação -->
+<img src="{{urlImg}}"/>
+
+<!-- usando porperty binding -->
+<img [src]="urlImg"/>
+
+
+Rascunho:
+Interpolation é um sintaxe sugar, por baixo o Angular transforma em property binding (ver exemplo de property biding).
+
+Well, interpolation works well for adding dynamic values between headings, like here, between the h2 element.
+Or if you're using divs, spans, paragraphs, or wherever you want to render text, that's where you use string
+interpolation. É mais prático e limpo.
+
+
+Exemplos relacionados: property binding, attibute biding

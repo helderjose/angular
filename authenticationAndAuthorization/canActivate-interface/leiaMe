@@ -1,0 +1,11 @@
+login para testar a aplicação - fake-backend.ts
+mosh@domain.com
+1234
+
++ auth-guard.service.ts
+    - Pesquise por "canActivate" no site angular.io.
+    - "CanActivate"
+
++ app.module.ts
+    - "AuthGuard"
+    - A rota "path: 'admin'" só é permitida se o usuário estiver logado.

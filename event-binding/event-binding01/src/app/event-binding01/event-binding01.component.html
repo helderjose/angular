@@ -1,0 +1,19 @@
+<!-- imprime: Button was clicked -->
+<button (click)="onSave()">Save</button>
+
+
+<!-- imprime o JSON: MouseEvent{...} -->
+<!-- Aqui $event é um json MouseEvent{...} com várias propriedade, ex: screenX, screenY e etc -->
+<button (click)="onSave2($event)">Save with $event</button>
+
+
+<br/><br/>
+<!-- vai chamar os dois metodos (do botao e do div) por causa do bubble event -->
+<div (click)="onDivClicked()">
+  <p>event bubbling, an event bubbles up the DOM tree</p>
+  <button (click)="onClickBubblingExample($event)">event bubbling example</button>
+</div>
+
+<!--
+  $event represent the DOM event, a standard DOM event that you have seen in vanilla JavaScript and jQuery
+-->

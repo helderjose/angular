@@ -1,0 +1,17 @@
+<p>
+  O component chama o service.<br/>
+  No service fica a lógica para acessar o serviço http (endpoint).
+</p>
+
+<ul>
+  <li>Crie um component</li>
+  <li>Crie um service</li>
+  <li>Coloque o service no metadado 'providers' do app.module.ts</li>
+  <li>Chame o service no construtor do component como parâmetro</li>
+</ul>
+
+<!-- diretiva ngFor para exibir os cursos que veio do service -->
+<ul>
+  <li>Essa lista de cursos vem do service</li>
+  <li *ngFor="let course of courses">{{ course }}</li>
+</ul>

@@ -1,0 +1,31 @@
+Pipe é usado para formatar dados (uppercase, lowercase, currency, date e etc).
+
+--------------------
+----- pipe01 -----
+--------------------
+Usa apenas os pipes do angular. No projeto tem mais exemplo.
+
+
+<p> {{course.title | uppercase | lowercase}} </p>
+{{course.rating | number:'1.2-2'}} <br/> <!-- 1.2-2 = mínimo de duas casas decimais e no máximo duas casas decimais -->
+{{course.price | currency:'AUD':false}} <br/> <!-- false para nao mostrar o currency symbol $ --> AUD = Australian Dollar
+{{course.price | currency:'AUD':false:'3.2-2'}} <br/> <!-- 3.2-2 = mínimo de três dígitos inteiros 002,56 -->
+
+
+<!-- pesquise por DATEPIPE no site andular.io para ver os formatos disponíveis -->
+{{course.releaseDate | date}}
+{{course.releaseDate | date:'shortDate'}}
+
+
+
+-----------------------------------
+----- pipe02-custompipe01 -----
+-----------------------------------
+Pesquise por 'PipeTransform' no https://angular.io
+Nesse exemplo é criado um pipe para summary (resumo), ex: meu texto = meu te...
+Olhar o projeto porque o exemplo é grande.
+
+olhar summary.pipe.ts para ver a implementação do código.
+{{ text | summary }}
+{{ text | summary:10 }}
+

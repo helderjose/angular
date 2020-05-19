@@ -1,0 +1,11 @@
+<p>template vairables example</p>
+<!--
+    O #email é o template variable.
+    #email referencia o input field.
+
+    O keyup.enter é um event filtering (tem explicação em outro exemplo)
+ -->
+<input placeholder="email"
+#email
+(keyup.enter)="emailOnKeyUp(email.value)"
+>

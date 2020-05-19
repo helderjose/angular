@@ -1,0 +1,11 @@
+<div class="courseBox">
+    <h3>
+        Cursos {{ nomePortal }}
+    </h3>
+    <ul>
+        <!-- o * é chamado de sugar operator -->
+        <li *ngFor="let curso of cursos">
+            {{ curso }}
+        </li>
+    </ul>
+</div>

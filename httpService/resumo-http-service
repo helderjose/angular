@@ -1,0 +1,133 @@
+Fake Online REST API for Testing and Prototyping
+json-placeholder: http://jsonplaceholder.typicode.com/
+
+
+-------------------------
+----- getting-data -----
+-------------------------
+HttpModule no app.module.ts
+
+http.get('http://jsonplaceholder.typicode.com/posts').subscribe(response => {
+
+
+-------------------------
+----- creating-data -----
+-------------------------
+this.http.post(this.url, JSON.stringify(post)).subscribe(response => {...
+
+
+-------------------------
+----- updating-data -----
+-------------------------
+- patch -> consigo atualizar só algumas propriedades do json.
+- put -> só consigo atualizar passando o json completo.
+
+this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true }))
+this.http.put(this.url, JSON.stringify(post))
+
+
+-------------------------
+----- deleting-data -----
+-------------------------
+<button (click)="deletePost(post)"
+this.http.delete(this.url + '/' + post.id).subscribe(response => { depois remove o array do component.ts
+
+
+------------------------------
+----- on-init-interface -----
+------------------------------
+Nunca chame http server no contrutor, use ngOnInit()
+
+
+-----------------------------------
+----- separation-of-concerns -----
+-----------------------------------
+só teoria
+
+
+-----------------------------------
+----- extracting-a-service -----
+-----------------------------------
+Cria um service e coloca a chamda ao http server nele.
+
+
+------------------------------
+----- handling-errors -----
+------------------------------
+só teoria
+
+----------------------------------------
+----- handling-unexpected-errors -----
+----------------------------------------
+url inválida no service.ts para simular um erro
+.subscribe(response => {...}, error => {...}
+
+
+----------------------------------------
+----- handling-expected-errors -----
+----------------------------------------
+.subscribe(, response..., (error: Response) => {...})
+if(error.status === 400)
+
+
+--------------------------------------------------
+----- throwing-application-specific-errors -----
+--------------------------------------------------
+- coloca o tratamento de erro no service e retorna um AppError par o component.
+
+
+----------------------------------------
+----- handling-bad-request-errors -----
+----------------------------------------
+olhar o código
+
+
+------------------------------------------------------------
+----- importing-observable-operators-factory-methods -----
+------------------------------------------------------------
+import 'rxjs/add/observable/throw';  //post.service.ts
+
+
+-----------------------------------
+----- global-errors-handling -----
+-----------------------------------
+Cria um GlobalErrorHandler para tirar o código repetido do component.
+
+app-error-handler.ts
+export class AppErrorHandler implements ErrorHandler {...}
+component.ts
+else throw error; //will be captured by our GlobalErrorHandler (app-error-handler.ts)
+app.module.ts
+providers: [ { provide: ErrorHandler, useClass: AppErrorHandler } ]
+
+
+-------------------------------------------------------
+----- extracting-reusable-error-handling-method -----
+-------------------------------------------------------
+Cria um método para tratar erro no post.service.ts
+post.service.ts
+private handleError(error: Response) {...}
+
+.catch(this.handleError);
+
+
+---------------------------------------------
+----- extracting-reusable-data-service -----
+---------------------------------------------
+Cria um service que pode ser reaproveitado.
+Explicação no arquivo leiaMe do projeto
+
+-------------------------
+----- map-operator -----
+-------------------------
+Olhe o arquivo leiaMe do projeto.
+
+---------------------------------------------
+----- optimistic-pessimistic-updates -----
+---------------------------------------------
+Olhe o arquivo leiaMe do projeto.
+
+-----------------------------------
+----- observables-promises -----
+-----------------------------------
+Olhe o arquivo leiaMe do projeto.

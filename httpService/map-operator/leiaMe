@@ -1,0 +1,10 @@
+---- Map operator -----
+map is an observable operator.
+With the map operator, we can transform the items in an observable.
+
++ data.service.ts
++ posts.component.ts
+
+npm install
+ng serve
+

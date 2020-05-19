@@ -1,0 +1,5 @@
+<!-- evita o erro quando a variável for null usando Safe traversal operator -->
+<span>{{ task.assignee?.name }}</span>
+
+<!-- evita o erro quando a variável for null usando ngIf -->
+<span *ngIf="task.assignee">{{ task.assignee.name }}</span>

@@ -1,0 +1,10 @@
++ favorite.component.html
++ favorite.component.ts
++ app.module.ts
++ app.component.ts
++ app.component.html
+
+
+----- comandos -----
+npm install
+ng serve

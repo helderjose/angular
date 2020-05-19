@@ -1,0 +1,63 @@
+===== 163. Deploying to GitHub Pages =====
+https://pages.github.com/
+
+Assitir de novo quando for fazer
+
+
+===== 162. Other Deployment Options =====
+Só explica um pouco sobre, "GitHub Pages, "Firebase" e "Heroku"
+
+
+===== 161. Linting in VSCode =====
+Instala a extensão TSLint no vscode, o editor grifa  a parte que está diferente do configurado.
+arrumar todos os erros com vscode:
+ctrl + shift + p
+digite: tslint e use o "fix all..." isso vai corrigir todo o arquivo.
+
+
+===== 160. Linting with Anguclar CLI =====
++ package.json
+    - "tslint"
++ tslint.json
+    - "quotemark"
+
+Comandos:
+ng lint     //dá as mensagens sobre o código. aqui dá pra ver a propriedade responsável e procurar no tslint.json e alterar o valor
+ng lint --fix       //corrige o código
+
+
+
+===== 159. Adding Custom Environments =====
++ environment.test.ts
++ .angular-cli.json
+    - "environments"
+
+ng serve --environment=test
+ng build --environment=test
+
+
+===== 158. Environments =====
++ environment.ts
+    - "navBarBackgroundColor"
++ environment.prod.ts
+    - "navBarBackgroundColor: 'white'"
+
+ng serve   //usa environment.ts por padrão
+ng serve --prod     //usa o environment.prod.ts
+ng serve --environment=prod     //ng serve --prod
+
+
+
+===== 157. Building Applications with Angular CLI =====
+ng build  //será criado a pasta dist
+ng build --prod         //será criado a pasta dist, menor que o do comando anterior.
+
+acho que é só colocar o conteúdo da pasta dist no webserver.
+
+
+
+===== 156. Angular Compiler in Action =====
+Explicação teórica
+
+===== 155. JIT vs AOT Compilation =====
+Explicação teórica

@@ -1,0 +1,27 @@
+OBS: Tomar cuidado se for implementar em um projeto real, porque tem falhas no caso
+do usuário clicar várias vezes no botão por exemplo.
+
++++++ Optmistic vs Pessimistic Updates +++++
+--- Optmistic ---
+Optmistic é Hopeful
+Ex: Coloca o item no list e deposi chama o serviço (dá a impressão que foi mais rápido para o usuário).
+Tem que tomar alguns cuidados na hora de usar isso, não use o index porque o usuário pode criar ou
+apagar um item do array enquanto a operação acontece.
+
+--- Pessimistic ---
+Pessimistic é Hopeless ou negative.
+Ex: O item só é colocado no list depois que o server retorna a resposta.
+
++ data.service.ts
+    - No método "create" tem como simular uma falha.
+    - No método "delete" tem como simular uma falha.
++ posts.component.ts
+    - Foi alterado para colocar o post no list e depois chamar o server. (se der falha, remove o post do list)
+
+
+
+
+
+npm install
+ng serve
+

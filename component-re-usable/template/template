@@ -1,0 +1,13 @@
+Fala sobre usar templateUrl ou template literal.
+
+
+@Component({
+  selector: 'favorite',
+  templateUrl: './favorite.component.html',
+  template: 'html aqui',
+  styleUrls: ['./favorite.component.css']
+})
+
+
+Se for componente pequeno, pode usar template literal.
+Componente grande e complexo melhor usar templateUrl (mais de 5 linhas mais ou menos)

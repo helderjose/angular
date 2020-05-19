@@ -1,0 +1,17 @@
+Nesse exemplo não precisa olhar os componentes, é apenas as rotas.
+
++ navbar.component.html
+    - <a routerLink -> carrega a penas o conteúdo do component. Usa em Single page Application (SPA)
+    - <a href -> a página carrega interira, evite usar.
+
++ github-followers.component.html
+    - <a [routerLink]="['/followers', follower.id]">{{ follower.login }}</a>
+
+
+Rota simples use <a routerLink="/followers">
+Rota com parâmetros use <a [routerLink]="['/followers', follower.id]">{{ follower.login }}</a>
+
+
+
+Testes do exemplo, acesse:
+clique nos itens do menu.

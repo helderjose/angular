@@ -1,0 +1,44 @@
+<section class="property-binding">
+    <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String rederizada com interpolation: {{ url }}</p>
+        <p>chamando getValor(): {{ getValor() }}</p>
+    </article>
+
+    <article>
+        <!--
+            obs: deve aparecer as imagens na tela, se não aparecer é que
+            algo de errado no http://lorempixel.com/350/150/city/
+        -->
+
+        <!-- usando interpolation -->
+        <p>título usando interpolation</p>
+        <h2>{{ title }}</h2>
+
+        <!-- usando property binding -->
+        <p>título usando property binding</p>
+        <h2 [textContent]="title"></h2>
+
+        <!-- usando interpolação -->
+        <img src="{{urlImg}}"/>
+        <!-- usando porperty binding -->
+        <img [src]="urlImg"/>
+
+        <!-- usando porperty binding 2-->
+        <img bind-src="urlImg"/>
+    </article>
+</section>
+
+<div>
+    <p>
+        os dois colchetes são interpolação, é mais indicado
+        quando quero apenas exibir um valor na página.<br/>
+
+    </p>
+
+    <br/><br/>
+    <h1>
+            obs: deve aparecer as imagens na tela, se não aparecer é que
+            tem algo errado no site http://lorempixel.com/350/150/city/
+    </h1>
+</div>

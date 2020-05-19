@@ -1,0 +1,42 @@
+project/e2e
+- end to end tests, automated tests
+
+project/node_modules
+- We have node modules and third party libraries dependencies
+
+project/src
+- source font
+
+project/src/app
+- models and components
+
+project/src/assets
+- store static assets of our application (images, icons etc)
+
+project/src/environments
+- store configuration settings for different environments.
+
+.../src/polyfills.js
+- imports some scripts that are required for running angular
+
+.../src/styles.css
+- global style for application
+
+project/.angular-cli.json
+- 
+
+project/.editorconfig
+- Para todo mundo da equipe usar as mesmas configurações no editor de texto.
+
+project/karma.conf.js
+- configurations for test runner or javascript code
+
+project/package.json
+- Dependências, quando usamos -save na instalação e outras informações como:
+nome do projeto;
+versão do projeto;
+dev dependencies (dependências para developers)
+
+
+project/tsconfig.js
+- TS config for your typescript compile for example

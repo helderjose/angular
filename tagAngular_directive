@@ -1,0 +1,14 @@
+ngFor
+courses = ['Angular 2', 'Java', 'Ext JS'];
+<li *ngFor="let course of courses">
+  {{course}}
+</li>
+
+ngIf
+
+<ng-template>...</ng-template>
+
+ngModel no input do form
+
+OnInit
+OnDestroy

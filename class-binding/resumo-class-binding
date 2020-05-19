@@ -1,0 +1,11 @@
+Assim conseguimos separa as classes fixas no atributo "class" e as classes dinâmicas no class binding [class]
+
+isActive = true;
+
+<button
+  class="btn-blue"
+  [class.myClass]="isActive"
+  [class.active]="isActive"
+>Save</button>
+
+

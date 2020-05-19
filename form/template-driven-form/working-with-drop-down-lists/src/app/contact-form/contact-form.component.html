@@ -1,0 +1,56 @@
+
+<!--
+  Conteúdo desse exemplo:
+  ngForm com [value]="animal.id" e [ngValue]="car"
+  select multiple
+-->
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  
+  <!-- Simple Object -->
+  <div class="form-group">
+    <label for="animals">Simple Object</label>
+    <select id="animals" class="form-control"
+      name="animals" ngModel
+    >
+    <option value="">Selecione</option>
+    <option *ngFor="let animal of animals" 
+      [value]="animal.id">{{ animal.name }}</option>
+    </select>
+  </div>
+
+  <!-- complex object -->
+  <div class="form-group">
+    <label for="cars">Complex Object</label>
+    <select id="cars" class="form-control"
+      name="cars" ngModel
+    >
+    <option value="">Selecione</option>
+      <option *ngFor="let car of cars" 
+      [ngValue]="car">{{ car.name }}</option>
+    </select>
+  </div>
+  
+  <!--
+    multiple
+    obs: pode mistuar o complex object com multiple
+  -->
+  <div class="form-group">
+    <label for="contactMethod">Contact Method - (segure ctrl ou shift para selecionar vários)</label>
+    <select multiple id="contactMethod" class="form-control"
+      name="contactMethod" ngModel
+    >
+    <option value="">Clique aqui para indicar nenhum</option>
+    <option *ngFor="let method of contactMethods" 
+      [value]="method.id">{{ method.name }}</option>
+    </select>
+  </div>
+
+  <p>
+    <!-- | json imprime no formato json -->
+    {{ f.value | json }}
+  </p>
+
+  <button class="btn btn-primary"
+    [disabled]="!f.valid"
+  >Submit</button>
+</form>

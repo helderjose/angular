@@ -1,0 +1,12 @@
+Injeção de dependência é passar uma classe no construtor do component (como um service por exemplo), isso evita o uso do new no construtor, facilitando criar um service fake para testes).
+
+olhar exemplo: service01
+
+----- courses.service.ts -----
+export class CoursesService {
+  getCourses() {...
+
+----- courses.component.ts -----
+constructor(coursesService: CoursesService) {
+  this.courses = coursesService.getCourses();
+...

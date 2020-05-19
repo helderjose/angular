@@ -1,0 +1,5 @@
++ navbar.component.html
+    - "queryParams"
+
++ github-followers.component.ts
+    - ngOnInit()

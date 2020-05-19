@@ -1,0 +1,29 @@
+Property binding faz binding to a property of a DOM object, and not an attribute of an HTML element.
+Com property binding we bind a property of a DOM element, como o src do img, to a field where property in our component.
+Property biding com [ ] works only one way, do component para a view.
+
+
+----- property binding -----
+Property binding se refere á propriedade html.
+
+
+Nesse caso seria melhor usar interpolation, fica mais legível.
+<h2 [textContent]="myVar"></h2>
+
+Mais legível do que interpolation
+<img [src]="myVar"/>
+
+<img bind-src="myVar"/>
+
+
+----- para baixo é string interpolation -----
+String interpolation é mais indicado quando quero apenas exibir um valor na página.
+String interpolation é mais prático de usar.
+A string interpolation é tranformada em property binding pelo Angular.
+
+Nesse caso use interpolation, é mais limpa e clara
+<h2>{{ myVar }}</h2>
+
+Nesse caso use property biding, é mais limpa e clara do que interpolation usado abaixo.
+<img src="{{myVar}}"/>
+

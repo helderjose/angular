@@ -1,0 +1,80 @@
+<h1>
+  {{title}}
+</h1>
+
+
+<div>
+  <p>Tutorial</p>
+  <ul>
+    <li>
+      <p>
+        Crie o module cursos:<br/>
+        ng g m cursos<br/>
+        ng g module cursos<br/>
+        Será criada uma pasta cursos com o cursos.module.ts
+      </p>
+    </li>
+    <li>
+      <p>
+        Crie o componente cursos<br/>
+        ng g c cursos<br/>
+        Será criados os arquivos do component na pasta cursos e o
+        arquivo app.module.ts será atualizado.<br/>
+        No arquivo app.module.ts remova o import referente ao
+        'CursosComponent' e remova-o do metadado 'declarations'.
+      </p>
+    </li>
+    <li>
+      <p>
+        cursos.module.ts<br/>
+        Import o 'CursosComponent'.<br/>
+        Insira 'CursosComponent' no metadado 'declarations'.<br/>
+        Aqui o cursos.component já pertence ao cursos.module.<br/><br/>
+        Adicione o metadado 'exports' e coloque o 'CursosComponent' nele.
+      </p>
+    </li>
+    <li>
+      <p>
+        app.module.ts<br/>
+        Usando o 'cursos.module' no app.module.ts<br/>
+        Import o 'CursosModule'.<br/>
+        Use o 'CursosModule'' no metadado 'declarations'.<br/>
+        Use a tag app-cursos no app.component.html.
+      </p>
+    </li>
+    <li>
+      <p>
+        Obs: Ao importar um module, posso usar tudo que ele expõe
+        em qualquer componente que esteja declarado.
+      </p>
+    </li>
+    <li>
+      <p>
+        Criar o component curso-detalhe<br/>
+        ng g c cursos/curso-detalhe<br/>
+        Como esse componente foi criado dentro da pasta 'cursos',
+        ele será automanticamente declarado no cursos.module.ts<br/>
+        Como o 'CursoDetalheComponent' foi declarado no
+        'cursos.module.ts', você pode usar o seletor
+        'app-curso-detalhe' de 'CursoDetalheComponent'
+        no cursos.component.html.<br/>
+      </p>
+    </li>
+    <li>
+      <p>
+        Não consigo usar o selector de 'CursoDetalheComponent' neste
+        arquivo porque não exportei-o no curos.module.ts
+      </p>
+    </li>
+  </ul>
+</div>
+
+<div style="background-color: orange;">
+  <app-cursos></app-cursos>
+</div>
+
+<!--
+  Não consigo usar o selector de 'CursoDetalheComponent' porque
+  não exportei-o no curos.module.ts
+<app-curso-detalhe></app-curso-detalhe>
+-->

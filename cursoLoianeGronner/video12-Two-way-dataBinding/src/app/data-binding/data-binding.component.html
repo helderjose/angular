@@ -1,0 +1,36 @@
+<section class="two-way-binding">
+  <article>
+    <h3>Two-way-binding</h3>
+    <div>
+      <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value" />
+
+        <!--
+        acho que não existe mais ngModel
+        <input type="text"
+          [ngModel]="nome"
+          (ngModelChange)="nome = $event">-->
+
+          <!--<input type="text"
+            [(ngModel)]="nome"/>-->
+
+            <!--<input type="text"
+              bindon-ngModel="nome"/>-->
+
+      <p>Você digitou {{ nome }}</p>
+
+      <div>
+        Meu nome é {{ pessoa.nome }} e tenho e tenho {{ pessoa.idade }}
+        <!--<input type="text" [(ngModel)]="pessoa.nome">
+        <input type="text" [(ngModel)]="pessoa.idade">-->
+      </div>
+    </div>
+  </article>
+</section>
+
+<!--
+<input type="text"
+  [value]="nome" //propertie binding
+  (input)="nome = $event.target.value" //event binding>
+-->

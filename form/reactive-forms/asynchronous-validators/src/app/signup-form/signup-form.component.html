@@ -1,0 +1,35 @@
+
+<!--
+    Anotações do exemplo:
+    Pesquise por asyncValidatorFn no site angular.io
+    Simula uma consulta ao server para ver se o username já está sendo usado.
+-->
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="username">Username - (digite mosh dê tab e espere 2 segundos)</label>
+        
+        <input
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control"
+        >
+        <div
+            *ngIf="username.touched && username.invalid"
+            class="alert alert-danger"
+        >
+            <!-- esse div é desse exemplo -->
+            <div *ngIf="username.errors.shouldBeUnique">Username is already taken.</div>
+
+            <!-- para baixo é dos exemplos anteriores -->
+            <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space.</div>
+            <div *ngIf="username.errors.required">Username is required</div>
+            <div *ngIf="username.errors.minlength">
+                Username should be minimum
+                {{ username.errors.minlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

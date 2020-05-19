@@ -1,0 +1,95 @@
+---------- Introdução ----------
++ Create controls programmatically
++ Add validation
++ Implement custom validation
++ Implement asynchronous validation
++ Build forms that include an array of objects
+
+
+--------------------------------------------------
+----- creating-controls-programmatically -----
+--------------------------------------------------
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';  //app.module.ts
+
+--- component.ts ---
+import { FormGroup, FormControl } from '@angular/forms'
+form = new FormGroup({ username: new FormControl(), outros campos do form })
+
+<form [formGroup]="form">
+  <input formControlName="username" ... outros atributos de input />
+
+
+
+------------------------------
+----- adding-validation -----
+------------------------------
+--- .ts ---
+username: new FormControl('', Validators.required)
+get username() { return this.form.get('username'); }
+--- .html ---
+<div *ngIf="username.touched && username.invalid" />
+
+
+----------------------------------------
+----- specific-validation-errors -----
+----------------------------------------
+Tem vários validators no required, minLength e etc no mesmo input.
+---.ts ---
+username: new FormControl('',[Validators.required, Validators.minLength(3)])
+--- .html ---
+<div *ngIf="username.errors.required">Username is required</div>
+<div *ngIf="username.errors.minlength">  {{ username.errors.minlength.requiredLength }} characters.  </div>
+
+
+---------------------------------------------
+----- implementing-custom-validation -----
+---------------------------------------------
+Cria um validator para verificar se tem espaço no campo username
+
+
+-----------------------------------
+----- asynchronous-operations -----
+-----------------------------------
+Esse exemplo ainda não tem o resultado esperado, (não acontece nada), continua no próximo exemplo.
+Simula uma chamada ao server (com setTimeout no validators.ts) para verificar se o username já está sendo usado.
+
+
+-----------------------------------
+----- asynchronous-validators -----
+-----------------------------------
+Simula uma chamada ao server (com setTimeout no validators.ts) para verificar se o username já está sendo usado.
+Olhe o projeto, tem muita coisa para colocar aqui
+
+
+-----------------------------------
+----- showing-loader-image -----
+-----------------------------------
+<div *ngIf="username.pending">
+
+
+---------------------------------------------
+----- validating-form-input-upon-submit -----
+---------------------------------------------
+this.form.setErrors({ invalidLogin: true });
+<form (ngSubmit)="login()" ...
+*ngIf="form.errors"
+
+
+------------------------------
+----- nested-formGroups -----
+------------------------------
+get username() { return this.form.get('account.username'); }
+<div formGroupName="account">
+
+
+-------------------------
+----- form-array -----
+-------------------------
+Olhar o exemplo porque tem muita coisa.
+
+
+
+-------------------------
+----- form-builder -----
+-------------------------
+Cria o formulário no .ts usando FormBuilder

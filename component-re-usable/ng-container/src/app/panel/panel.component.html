@@ -1,0 +1,16 @@
+
+
+<!--
+  No seletor <bootstrap-panel> o elemento class="heading" será colocado no select=".heading" (olhar app.compnent.html).
+  No seletor <bootstrap-panel> o elemento class="body" será colocado no select=".body" (olhar app.compnent.html).
+
+  You don't need a selector if you have only one ng-content.
+-->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ng-content select=".heading"></ng-content>
+  </div>
+  <div class="panel-body">
+    <ng-content select=".body"></ng-content>
+  </div>
+</div>

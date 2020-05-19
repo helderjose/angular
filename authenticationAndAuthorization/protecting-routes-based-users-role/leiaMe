@@ -1,0 +1,13 @@
++ admin-auth-guard.service.ts
+
++ app.module.ts
+    - "AdminAuthGuard"
+
+
+Teste:
+Faça login e acesse http://localhost:4200/admin
+A página vai abrir.
+
+Use o token de admin.false no fake-backend.ts
+Faça login e acesse http://localhost:4200/admin
+Vai ser redirecionado para Access Denied

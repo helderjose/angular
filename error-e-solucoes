@@ -1,0 +1,6 @@
+Erro
+You have to be inside an angular-cli project in order to use the serve command.
+ao executar "ng serve", mesmo estando em um projeto Angular.
+Executei:
+npm install -g @angular/cli@latest
+

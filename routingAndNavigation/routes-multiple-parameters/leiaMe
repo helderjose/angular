@@ -1,0 +1,14 @@
++ app.module.ts
+- Altere a rota passando mais parâmetro
+{path: 'followers/:id/:username', component: GithubProfileComponent},
+
++ github-followers.component.html
+- Altere o link para follower passando o login
+<a [routerLink]="['/followers', follower.id, follower.login]">{{ follower.login }}</a>
+
++ github-profile.component.ts
+    - pega o username
+
++ No navegador
+- clique em followers
+- clique em um follower e veja a url com id e username: http://localhost:4200/followers/10586972/SeaBassTian

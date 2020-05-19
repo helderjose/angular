@@ -1,0 +1,10 @@
+npm install
+ng serve
+
+
+npm install tassign --save
+
+
++ store.ts
+    - "assign"
+    - "tassign"

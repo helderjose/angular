@@ -1,0 +1,21 @@
+npm install
+ng serve
+
+
+npm install immutable --save
+
++ store.ts
+    - "<Map<string, any>>"
+    - "return state.set('counter', state.get('counter') + 1);"
+
++ app.module.ts
+    - "NgRedux<Map<string, any>>"
+    - "fromJS"
+
++ app.component.ts
+    - "<Map<string, any>>"
+    - "s.get('counter')"
+
+Usando immutable object, impedimos alteração acidental na variável (myvar++), mas é mais verboso.
+Obs: só os comentários são desse exemplo.
+Próximo exemplo usará TSA (prefira esse).

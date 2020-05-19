@@ -1,0 +1,34 @@
+
+<!--
+    Anotações do exemplo:
+    Simula uma consulta ao server (com setTimeout no username.validators.ts)
+    para ver se o username já está sendo usado.
+    Obs: Esse exemplo ainda não tem o resultado esperado, (não acontece nada), continua no próximo exemplo
+-->
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        
+        <input
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control"
+        >
+        <div
+            *ngIf="username.touched && username.invalid"
+            class="alert alert-danger"
+        >
+            <!-- esse div é desse exemplo -->
+            <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space.</div>
+
+            <div *ngIf="username.errors.required">Username is required</div>
+            <div *ngIf="username.errors.minlength">
+                Username should be minimum
+                {{ username.errors.minlength.requiredLength }} characters.
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

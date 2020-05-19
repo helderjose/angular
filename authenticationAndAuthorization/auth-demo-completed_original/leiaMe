@@ -1,0 +1,7 @@
+Esse código eu não editei.
+compara os arquivos:
+admin-auth-guard.service.ts
+auth-guard.service.ts
+login.component.ts
+
+que foi do exemplo que não funcinou o redirecionamento para a página "admin" quando o usuário logar

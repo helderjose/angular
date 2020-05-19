@@ -1,0 +1,14 @@
+Types of Tests
+
++ Unit
++ Integration
++ End-to-end
+
++++++ Unit Tests +++++
+Test a component in isolation, without external resources (e.g. file system, database, API endpoints)
+
++++++ Integration Tests +++++
+Test a component with external resources (e.g. filey system, database, API endpoints)
+
++++++ End-to-end Test +++++
+Test the entire application as a whole.

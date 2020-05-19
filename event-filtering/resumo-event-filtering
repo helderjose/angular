@@ -1,0 +1,10 @@
+chama onKeyUp ao apertar enter
+<input (keyup.enter)="onKeyUp($event)"/>
+$event.target.value  //pega o valor digitadono input (olhar template variable para ver outra maneira de pegar o valor)
+
+
+modo antigo:
+<input (keyup)="onKeyUpDeprecated($event)"/>
+aqui o método onKeyUpDeprecated será chamado ao apertar qualquer tecla
+13 é a tecla enter
+if($event.keyCode === 13) { $event.target.value

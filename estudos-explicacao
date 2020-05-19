@@ -1,0 +1,17 @@
+a explicação está nos exemplos e no arquivo "leiaMe" de cada exemplo. Depois que organizar as pastas, apagar esse arquivo
+
+----- component -----
+Exemplo: component02-input-properties
+ng-content
+ng-container
+
+Input Properties
+Aliasing Input Properties
+Output Properties
+Passing event Data
+Aliasing Output Properties
+
+
+
+----- directive -----
+ngIf, ngFor, custom-directive e etc

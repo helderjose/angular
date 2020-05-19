@@ -1,0 +1,1 @@
+never call HTTP services in our automated tests. (porque queremos executar muitos testes o mais rápido possível)

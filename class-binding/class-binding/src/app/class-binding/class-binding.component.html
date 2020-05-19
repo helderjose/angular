@@ -1,0 +1,13 @@
+<p>
+  No component a vairável <b>isActive = true;</b>, inspecione o elemento e veja que o botão tem as classes
+  <b>btn-blue, myClass e active</b>
+  <br/>
+  Assim conseguimos separa as classes fixas no atributo <b>class</b> e as classes dinâmicas no 
+  <b>class binding [class]</b>
+</p>
+
+<button
+  class="btn-blue"
+  [class.myClass]="isActive"
+  [class.active]="isActive"
+>Save</button>

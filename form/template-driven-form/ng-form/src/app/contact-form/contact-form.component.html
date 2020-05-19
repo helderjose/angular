@@ -1,0 +1,46 @@
+
+<!--
+  Pesquise por "ngForm" no site angular.io
+  Conteúdo desse exemplo:
+  #f="ngForm" é um template variable
+  (ngSubmit)="submit(f) é um event binding
+
+  Preencha o form, clique no botão, abra o console e procure
+  a variável value do objeto form f.value
+-->
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group">
+      <label for="firstName">First name</label>
+      <input
+        minlength="3" maxlength="10"
+        pattern="banana"
+        required
+        type="text"
+        id="firstName" class="form-control"
+        name="firstName" #firstName="ngModel"
+        ngModel
+        (change)="log(firstName)"
+      >
+
+      <div
+        *ngIf="firstName.touched && !firstName.valid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+        <div *ngIf="firstName.errors.minlength">
+          First name should be minimum {{ firstName.errors.minlength.requiredLength }} characters.
+        </div>
+        <div *ngIf="firstName.errors.pattern">First name doesn't match the pattern (digite o que está no pattern).</div>
+      </div>
+  </div>
+
+  <!-- pode ignorar esse campo nesse exemplo. -->
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea id="coment" class="form-control"
+      cols="30" rows="10"
+      ngModel name="comment"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>

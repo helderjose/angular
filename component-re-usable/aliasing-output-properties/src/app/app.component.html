@@ -1,0 +1,20 @@
+<p>
+    abra o console e clique no ícone<br/>
+    <b>Nesse exemplo temos:</b><br/>
+    Aliasing Output Properties<br/>
+</p>
+
+
+<!--
+    (change) Mesmo nome que foi dado no favorite.component.ts
+    onFavoriteChanged()  Mesmo nome que foi dado no app.component.ts
+-->
+<favorite
+    (change)="onFavoriteChanged($event)"
+    [isFavorite]="post.isFavorite"
+>
+</favorite>
+
+<pre>
+    appComponent.post.isFavorite: {{post.isFavorite}}
+</pre>

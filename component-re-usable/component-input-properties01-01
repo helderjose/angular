@@ -1,0 +1,8 @@
+---- favorite component -----
+Assim também funciona,
+@Component({
+  //outra propriedades aqui
+  inputs: ['isFavorite']   //as variáveis devem ter o mesmo nome
+})
+export class FavoriteComponent {
+  isFavorite: boolean;  //as variáveis devem ter o mesmo nome

@@ -1,0 +1,3 @@
+@NgModule({
+  providers: Quando colocamos uma classe no metadado 'providers' o Angular cria um objeto singleton para usar na aplicação toda.
+})

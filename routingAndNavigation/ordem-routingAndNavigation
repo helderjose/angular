@@ -1,0 +1,10 @@
+configuring-routes
+router-outlet
+router-link-active
+getting-route-parameters
+route-parameters-observables
+routes-multiple-parameters
+query-parameters
+subscribing-multiple-observables
+switchMap-operator
+programmatic-navigation

@@ -1,0 +1,14 @@
+npm install
+ng serve
+
+
++ app.component.html
++ app.component.ts
++ actions.ts
++ store.ts
++ app.module.ts
+    - Só o "INITIAL_STATE" foi adicionado nesse exemplo
+
+
+Esse exemplo só escreve no state, não lê.
+O próximo exemplo vai ler o state.

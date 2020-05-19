@@ -1,0 +1,16 @@
+-------------------------
+----- component01 -----
+-------------------------
+import { Component } from '@angular/core';
+Para usar o decorator @Component, que transforma a classe em um component
+
+@Component({
+   selector: nome do seletor para usar em outros arquivos
+   template: código html com `...`
+})
+
+
+export class MeuPrimeiroComponent
+export: expõe a classe para ser usada em outros arquivos.
+
+Lembre de declarar o component no app.module.ts

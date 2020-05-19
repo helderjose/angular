@@ -1,0 +1,8 @@
+template-driven-form_completo
+exemplo completa da primeira vez que fiz o curso, quando eu separar os exemplos ver se apago ou se deixo como completo.
+
+
+Tentar criar um exemplo com todos os exemplos, uma página para cada exemplo para ficar separado, se der certo, deixar apenas os
+arquivos envolvidos só para consulta rápida e revisão, ex:
+projeto ng-model, refazer ele nesse exemplo geral citado acima e deixar apenas o html, ts envolvido no exemplo.
+ou então deixar esses exemplo como estão e criar uma pasta "resumo" só com os arquivos envolvidos nos exemplos para revisão rápida.

@@ -1,0 +1,33 @@
+<!--
+    Quando usamos ngIf e a condição é false o elemento é removido do DOM
+
+    Use [ngIf] for large element trees.
+    Use [hidden] for small element trees.
+-->
+
+<!-- -------------- ngIf com ng-template ----------------- -->
+<p>
+    <br/><br/>
+    Usando ngIf com ng-template
+</p>
+
+<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+    List of courses
+</ng-template>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
+
+<!-- -------------- ngIf ----------------- -->
+<p>
+    <br/><br/>
+    Usando apenas ngif
+</p>
+
+<div *ngIf="courses.length > 0">
+    List of courses
+</div>
+<div *ngIf="courses.length == 0">
+    No courses yet
+</div>

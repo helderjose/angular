@@ -1,0 +1,17 @@
+<pre>
+  td [attr.colspan]="componentColspan"
+  componentColspan é o atributo do component
+
+  property binding faz binding to a property of a DOM object, and not an attribute of an HTML
+
+  [attr.colspan] o prefixo attr diz para o Angular fazer binding com o atributo de um elemento HTML
+</pre>
+
+<table>
+  <tr>
+    <td [attr.colspan]="componentColspan">my td</td>
+
+    <!-- erro, porque property binding faz bind com propriedade do DOM object e nao com propriedade do html -->
+    <!-- <td [colspan]="componentColspan">my td</td> -->
+  </tr>
+</table>

@@ -1,0 +1,54 @@
+
+<!--
+  Conteúdo desse exemplo:
+  #contact="ngModelGroup" é uma template variable.
+
+  ngModelGroup="contact" #contact="ngModelGroup"
+  *ngIf="!contact.valid"
+-->
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  
+  <!-- essas duas divs sao desse exemplo -->
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="!contact.valid">contact msg erro aqui</div>
+    
+    
+    <div class="form-group">
+        <label for="firstName">First name</label>
+        <input
+          minlength="3" maxlength="10"
+          pattern="banana"
+          required
+          type="text"
+          id="firstName" class="form-control"
+          name="firstName" #firstName="ngModel"
+          ngModel
+          (change)="log(firstName)"
+        >
+  
+        <div
+          *ngIf="firstName.touched && !firstName.valid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="firstName.errors.required">First Name is required</div>
+          <div *ngIf="firstName.errors.minlength">
+            First name should be minimum {{ firstName.errors.minlength.requiredLength }} characters.
+          </div>
+          <div *ngIf="firstName.errors.pattern">
+            First name doesn't match the pattern (digite o que está no pattern).
+          </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <!-- pode ignorar esse campo nesse exemplo. -->
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea id="coment" class="form-control"
+      cols="30" rows="10"
+      ngModel name="comment"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>

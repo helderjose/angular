@@ -1,0 +1,11 @@
++ posts.component.ts
++ posts.component.html
++ app.module.ts
+   - olhe o metadato "imports"
+
+is a free online REST service that you can use whenever you need some fake data.
+http://jsonplaceholder.typicode.com/
+
+
+npm install
+ng serve

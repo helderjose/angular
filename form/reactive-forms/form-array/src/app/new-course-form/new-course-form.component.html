@@ -1,0 +1,15 @@
+<form>
+  <p>preencha, aperte enter. clique nos itens para remover</p>
+  <input
+    type="text" class="form-control"
+    (keyup.enter)="addTopic(topic)" #topic
+  >
+  <ul class="list-group">
+    <li
+      *ngFor="let topic of topics.controls"
+      (click)="removeTopic(topic)"
+      class="list-group-item">
+      {{ topic.value }}
+    </li>
+  </ul>
+</form>

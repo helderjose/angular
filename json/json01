@@ -1,0 +1,4 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+// campos do form aqui
+
+<p>{{ f.value | json }}</p>

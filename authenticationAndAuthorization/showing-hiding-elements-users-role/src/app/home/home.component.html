@@ -1,0 +1,17 @@
+
+<h1>Home Page</h1>
+<p>
+  Welcome [NAME]
+</p>
+<ul>
+  <!-- com o token admin false esse link não aparece quando logar -->
+  <li
+    *ngIf="authService.isLoggedIn() && authService.currentUser.admin"><a routerLink="/admin">Admin</a>
+  </li>
+  <li
+    *ngIf="!authService.isLoggedIn()"><a routerLink="/login">Login</a>
+  </li>
+  <li
+    *ngIf="authService.isLoggedIn()"><a (click)="authService.logout()">Logout</a>
+</li>
+</ul>

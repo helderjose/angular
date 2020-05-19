@@ -1,0 +1,41 @@
+<section class="two-way-binding">
+  <article>
+    <h1>Não consegui fazer o Two-way-data binding funcionar</h1>
+    <h3>Two-way-binding</h3>
+    <div>
+      <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value" />
+
+        <!--
+        acho que não existe mais ngModel
+        <input type="text"
+          [ngModel]="nome"
+          (ngModelChange)="nome = $event">-->
+
+          <!--<input type="text"
+            [(ngModel)]="nome"/>-->
+
+            <!--<input type="text"
+              bindon-ngModel="nome"/>-->
+
+      <p>Você digitou {{ nome }}</p>
+
+      <div>
+        Meu nome é {{ pessoa.nome }} e tenho e tenho {{ pessoa.idade }}<br/><br/>
+        <!-- era para sem assim mas estah dando erro -->
+          <!--<input type="text" [(ngModel)]="pessoa.nome"><br/>
+        <input type="text" [(ngModel)]="pessoa.idade">-->
+
+        <!-- <input type="text" [(ngModel)]="meuTeste"/> -->
+        <p>Teste: {{meuTeste}}</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!--
+<input type="text"
+  [value]="nome" //propertie binding
+  (input)="nome = $event.target.value" //event binding>
+-->

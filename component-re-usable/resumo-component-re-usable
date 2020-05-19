@@ -1,0 +1,156 @@
+----------------------------------------
+----- component02-input-properties -----
+----------------------------------------
+separar em vários exemplos
+
+
+----------------------------------------
+----- component-input-properties01 -----
+----------------------------------------
+----- favorite.component.ts -----
+import { Input } from '@angular/core';
+@Input() isSelected: boolean;
+onClick() { this.isSelected = !this.isSelected; }
+
+----- favorite.component.html -----
+<span (click)="onClick()" > </span>
+<p> {{isSelected}} </p>
+
+----- app.component.ts -----
+post = { isFavorite: true }
+
+<favorite [isSelected]="post.isFavorite"> </favorite>    //isSelected é do favorite.component.ts
+
+<p> appComponent.post.isFavorite: {{post.isFavorite}} </p>        //nunca eh alterado
+
+
+
+
+
+
+--------------------------------------------------
+----- component-aliasing-input-properties -----
+--------------------------------------------------
+----- favorite.component.ts -----
+@Input('isFavorite') isSelected: boolean;
+onClick() { this.isSelected = !this.isSelected; }
+
+----- favorite.component.html -----
+<p> {{isSelected}} </p>
+
+----- app.component.ts -----
+post = { isFavorite: true }
+
+----- app.component.html -----
+<favorite [isFavorite]="post.isFavorite"></favorite>
+
+
+Dica
+Usando is-favorite no lugar de isFavorite caso não queira usa camelCase em tag html.
+----- favorite.component.ts -----
+@Input('is-favorite') isFavorite: boolean;
+
+----- app.component.html -----
+<favorite [is-favorite]="post.isFavorite" ></favorite>
+
+
+
+
+----------------------------------------
+----- component-output-properties -----
+----------------------------------------
+----- favorite.component.ts -----
+import { Output, EventEmitter } from '@angular/core';
+@Output() change = new EventEmitter();
+onClick() { ... this.change.emit();  //chama o appComponent.onFavoriteChanged() }
+
+----- favorite.component.html -----
+<span (click)="onClick()"></span>
+
+----- app.component.ts -----
+onFavoriteChanged() {...}
+
+----- favorite.component.ts -----
+<favorite (change)="onFavoriteChanged()" ></favorite>
+
+----------------------------------------
+----- component-passing-event-data -----
+----------------------------------------
+----- favorite.component.ts -----
+export interface FavoriteChangedEventArgs { newValue: boolean }
+@Output() change = new EventEmitter();
+this.change.emit({ newValue: this.isSelected });  //passando um object
+----- app.component.ts -----
+onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) { console.log(eventArgs); }
+----- app.component.html -----
+<favorite (change)="onFavoriteChanged($event)"> </favorite>
+
+----------------------------------------
+----- aliasing-output-properties -----
+----------------------------------------
+----- favorite.component.ts -----
+@Output('change') click = new EventEmitter();
+//onClick() está no html
+onClick() { this.click.emit({ newValue: this.isSelected }); }
+
+----- app.component.ts -----
+//(change) Mesmo nome que foi dado no favorite.component.ts
+//onFavoriteChanged()  Mesmo nome que foi dado no app.component.ts
+(change)="onFavoriteChanged($event)"
+
+
+--------------------
+----- template -----
+--------------------
+
+Fala sobre usar templateUrl ou template literal.
+
+
+@Component({
+  selector: 'favorite',
+  templateUrl: './favorite.component.html',
+  template: 'html aqui',
+  styleUrls: ['./favorite.component.css']
+})
+
+
+Se for componente pequeno, pode usar template literal.
+Componente grande e complexo melhor usar templateUrl (mais de 5 linhas mais ou menos)
+
+
+--------------------
+----- styles -----
+--------------------
+
+Fala sobre as três formas de usar css no component.
+
+@Component({
+  outras propriedades aqui,
+  styles: [` css aqui `],
+  styleUrls: ['./favorite.component.css']  //nesse caso stylesUrls vai sobrescrever o css de styles: [`...`]
+
+})
+
+Usar a tag style no próprio arquivo .html
+<style> css aqui: sobrescreve os css de @Component </style>
+
+
+------------------------------
+----- view-encapsulation -----
+------------------------------
+Assistir o vídeo de novo e fazer o exemplo completo
+Emula o shadow DOM. Na prática provavelmente nunca precisará mexer nisso.
+
+
+
+-------------------------
+----- ng-content -----
+-------------------------
+<ng-content select=".heading"></ng-content>   //no panel-component.html
+<ng-container class="heading">Heading</ng-container>  //no app-component.html
+
+-------------------------
+----- ng-content -----
+-------------------------
+<ng-content select=".heading"></ng-content>   //no panel-component.html
+<ng-container class="heading">Heading</ng-container>  //no app-component.html

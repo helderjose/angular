@@ -1,0 +1,3 @@
+Cannot find module '@angular-devkit/core' angular/cli 1.5.0
+No package.json estava "@angular/cli": "1.5.0"
+mudei para "@angular/cli": "^1.5.0"

@@ -1,0 +1,25 @@
+
+<!--
+  Conteúdo desse exemplo:
+-->
+<form #f="ngForm" (ngSubmit)="submit(f)">
+
+  <!-- acho que radio button nao tem modo complex object -->
+  <div class="radio"
+    *ngFor="let method of contactMethods" 
+  >
+    <label>
+      <input type="radio" name="contactMethod" ngModel [value]="method.id">
+      {{ method.name }}
+    </label>
+  </div>
+
+  <p>
+    <!-- | json imprime no formato json -->
+    {{ f.value | json }}
+  </p>
+
+  <button class="btn btn-primary"
+    [disabled]="!f.valid"
+  >Submit</button>
+</form>

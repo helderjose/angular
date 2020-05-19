@@ -1,0 +1,5 @@
+template variable
+O que começa com '#' (jogo da velha) é um template variable
+
+<input required minlength="3" ngModel name="name" #name="ngModel" type="text" id="name" class="form-control">
+<select required ngModel name="category" #category="ngModel" id="category" class="form-control">
